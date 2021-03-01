@@ -1,8 +1,12 @@
-.monster-gif {
+.monster_gif {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.song_text {
+    color: white;
 }
 
 body {
