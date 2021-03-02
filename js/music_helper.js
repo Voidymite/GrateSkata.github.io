@@ -1,6 +1,3 @@
-// TODO!!!!!!!
-// - make player choose another song when current one is done
-
 // helper song class
 class Song {
     constructor(details, url) {
@@ -18,7 +15,19 @@ var songs = [
 ]
 
 // choose a song
-songToUse = songs[Math.floor(Math.random() * songs.length)];
+function chooseSong() {
+    return songs[Math.floor(Math.random() * songs.length)];
+}
+
+function updateSongPlayer(song) {
+    playerInfo = document.getElementById("player_info");
+    player = document.getElementById("player"); 
+
+    playerInfo.innerText = "🎵: " + song.details;
+    player.src = song.url;
+}
+
+songToUse = chooseSong();
 
 // wait for page DOM to load
 window.addEventListener("load", function() {
@@ -30,12 +39,11 @@ window.addEventListener("load", function() {
 
     // set the player and blurb properties
     playerDiv.classList.add("player_box");
-    playerInfo.innerText = "🎵: " + songToUse.details;
     playerInfo.classList.add("music_info");
+    playerInfo.id = "player_info";
+    player.id = "player";
     player.setAttribute("controls", "");
-    player.setAttribute("loop", "");
     player.classList.add("music_player");
-    player.src = songToUse.url;
     player.volume = 0.2;
 
     // add the player and blurb
@@ -43,4 +51,13 @@ window.addEventListener("load", function() {
     playerDiv.appendChild(playerBrk);
     playerDiv.appendChild(player);
     document.body.appendChild(playerDiv);
+
+    // update song info
+    updateSongPlayer(songToUse);
+
+    // once audio ends, update with another song
+    player.onended = function() {
+        updateSongPlayer(chooseSong());
+        player.play();
+    };
 });
