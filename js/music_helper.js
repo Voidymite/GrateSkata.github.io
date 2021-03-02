@@ -9,9 +9,25 @@ class Song {
 // songs list
 var songs = [
     new Song("Basset - Monster", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/monster/Inst.mp3"),
+    new Song("Basset - Winter Horrorland", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/winter-horrorland/Inst.mp3"),
+    new Song("Kawai Sprite - Blammed (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/blammed/Inst.mp3"),
     new Song("Kawai Sprite - Bopeebo (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/bopeebo/Inst.mp3"),
+    new Song("Kawai Sprite - Cocoa (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/cocoa/Inst.mp3"),
+    new Song("Kawai Sprite - Dadbattle (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/dadbattle/Inst.mp3"),
+    new Song("Kawai Sprite - Eggnog (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/eggnog/Inst.mp3"),
+    new Song("Kawai Sprite - Fresh (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/fresh/Inst.mp3"),
+    new Song("Kawai Sprite - High (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/high/Inst.mp3"),
+    new Song("Kawai Sprite - M.I.L.F. (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/milf/Inst.mp3"),
+    new Song("Kawai Sprite - Philly (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/philly/Inst.mp3"),
+    new Song("Kawai Sprite - Pico (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/pico/Inst.mp3"),
     new Song("Kawai Sprite - Roses (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/roses/Inst.mp3"),
-    new Song("Kawai Sprite - Test", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/test/Inst.mp3")
+    new Song("Kawai Sprite - Satin Panties (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/satin-panties/Inst.mp3"),
+    new Song("Kawai Sprite - Senpai (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/senpai/Inst.mp3"),
+    new Song("Kawai Sprite - South (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/south/Inst.mp3"),
+    new Song("Kawai Sprite - Spookeez (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/spookeez/Inst.mp3"),
+    new Song("Kawai Sprite - Test", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/test/Inst.mp3"),
+    new Song("Kawai Sprite - Thorns (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/thorns/Inst.mp3"),
+    new Song("Kawai Sprite - Tutorial", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/tutorial/Inst.mp3")
 ]
 
 // choose a song
