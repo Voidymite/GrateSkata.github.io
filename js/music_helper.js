@@ -1,3 +1,6 @@
+// TODO!!!!!!!
+// - make player choose another song when current one is done
+
 // helper song class
 class Song {
     constructor(details, url) {
@@ -9,6 +12,8 @@ class Song {
 // songs list
 var songs = [
     new Song("Basset - Monster", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/monster/Inst.mp3"),
+    new Song("Kawai Sprite - Bopeebo (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/bopeebo/Inst.mp3"),
+    new Song("Kawai Sprite - Roses (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/roses/Inst.mp3"),
     new Song("Kawai Sprite - Test", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/test/Inst.mp3")
 ]
 
