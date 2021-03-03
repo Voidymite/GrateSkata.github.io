@@ -1,17 +1,18 @@
-var mcrib_pattern = ["m", "c", "r", "i", "b"];
-var mcrib_current = 0;
-
-var keyHandler = function(event) {
-    if((mcrib_pattern.indexOf(event.key) < 0) || event.key !== mcrib_pattern[mcrib_current]){
-        mcrib_current = 0;
-        return;
+class RedirectEasterEgg {
+    constructor(pattern, url) {
+        this.pattern = pattern;
+        this.url = url;
     }
+};
 
-    mcrib_current++;
-    if (mcrib_pattern.length == mcrib_current) {
-        window.location.replace("https://twitter.com/PointyyESM/status/1364715306611073032");   
-    }
+var redirect_easter_eggs = [
+    new RedirectEasterEgg("m,c,r,i,b", "https://twitter.com/PointyyESM/status/1364715306611073032")
+]
 
+var egg = new Egg();
+
+for (let redirect of redirect_easter_eggs) {
+    egg.addCode(redirect.pattern, function() {
+        window.location.replace(redirect.url);
+    }).listen();
 }
-
-document.addEventListener("keydown", keyHandler, false);
