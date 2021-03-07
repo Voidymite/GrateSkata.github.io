@@ -15,6 +15,17 @@
         <script src="js/music_helper.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
         <script src="js/easter_egg_handler.js"></script>
+        <script src="js/list_helper.js"></script>
+
+        <script>
+            // wait for DOM to load
+            window.addEventListener("load", function() {
+                // append songs to list
+                for (song in songs) {
+                    appendToList("music_list", songs[song].details);
+                }
+            });
+        </script>
 
         <link rel="stylesheet" href="css/index.css">
 
@@ -44,17 +55,22 @@
         <div class="container-fluid">
             <h1>About me</h1>
             <p>I'm currently a 17 y/o amateur programmer. I don't have many hobbies asides from playing games and occasional 3D work.</p>
-            <br />
             <h1>Socials</h1>
+            <p>Where you can find me elsewhere on the internet</p>
             <ul>
                 <li><a href="https://github.com/AyeTSG">Github</a></li>
                 <li><a href="https://ayetsg.newgrounds.com/">Newgrounds</a></li>
                 <li><a href="https://twitter.com/AyeTSG">Twitter</a></li>
             </ul>
-            <br />
             <h1>Projects that this site uses</h1>
+            <p>Open source projects that help power this website</p>
             <ul>
                 <li><a href="http://thatmikeflynn.com/egg.js/">Egg.js</a></li>
+            </ul>
+            <h1>Music</h1>
+            <p>Music that is currently featured within the music player</p>
+            <ul id="music_list">
+
             </ul>
         </div>
     </body>
