@@ -13,7 +13,12 @@
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:creator" content="@AyeTSG" />
 
-        <script src="js/monster_helper.js"></script>
+        <script>
+            window.addEventListener("load", function() {
+                // hey man i'm gonna fix your eardrums!
+                document.getElementById("monster_music").volume = 0.1;
+            });
+        </script>
     </head>
     <body>
         <audio controls loop id="monster_music" src="https://github.com/ninjamuffin99/Funkin/raw/master/assets/songs/monster/Inst.mp3"></audio>
