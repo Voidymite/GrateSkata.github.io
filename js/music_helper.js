@@ -30,7 +30,8 @@ var songs = [
     new Song("Kawai Sprite - Spookeez (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/spookeez/Inst.mp3"),
     new Song("Kawai Sprite - Test", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/test/Inst.mp3"),
     new Song("Kawai Sprite - Thorns (Instrumental)", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/thorns/Inst.mp3"),
-    new Song("Kawai Sprite - Tutorial", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/tutorial/Inst.mp3")
+    new Song("Kawai Sprite - Tutorial", "https://raw.githubusercontent.com/ninjamuffin99/Funkin/master/assets/songs/tutorial/Inst.mp3"),
+    new Song("Markus Alexei - Magnetic Circuit", "http://ayetsg.github.io/music/notch/magnetic_circuit.mp3")
 ]
 
 // choose a song
