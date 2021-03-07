@@ -12,31 +12,8 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
 
-        <script src="js/music_helper.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
         <script src="js/easter_egg_handler.js"></script>
-
-        <script>
-            // wait for DOM to load
-            window.addEventListener("load", function() {
-                // helper func
-                function appendToList(list_id, item_contents) {
-                    // create the list item
-                    var list_item = document.createElement("li");
-
-                    // set the text of the item to the contents
-                    list_item.innerText = item_contents;
-
-                    // append the shit
-                    document.getElementById(list_id).appendChild(list_item);
-                }
-
-                // append songs to list
-                for (song in songs) {
-                    appendToList("music_list", songs[song].details);
-                }
-            });
-        </script>
 
         <link rel="stylesheet" href="css/index.css">
 
@@ -80,11 +57,6 @@
                 <li><a href="http://thatmikeflynn.com/egg.js/">Egg.js</a></li>
                 <li><a href="https://jquery.com/">jQuery</a></li>
                 <li><a href="https://popper.js.org/">Popper</a></li>
-            </ul>
-            <h1>Music</h1>
-            <p>Music that is currently featured within the music player</p>
-            <ul id="music_list">
-
             </ul>
         </div>
     </body>
