@@ -6,7 +6,8 @@ class RedirectEasterEgg {
 };
 
 var redirect_easter_eggs = [
-    new RedirectEasterEgg("m,c,r,i,b", "https://twitter.com/PointyyESM/status/1364715306611073032")
+    new RedirectEasterEgg("m,c,r,i,b", "https://twitter.com/PointyyESM/status/1364715306611073032"),
+    new RedirectEasterEgg("s,e,n,p,a,i", "https://ayetsg.github.io/files/senpai_is_real.mp4")
 ]
 
 var egg = new Egg();
