@@ -38,6 +38,8 @@ var egg_r = new Egg();
 
 for (let func of function_easter_eggs) {
     egg_f.addCode(func.pattern, function() {
+        console.log("EasterEggHandler: Executing " + func.pattern);
+
         func.exec();
     }).listen();
 }
