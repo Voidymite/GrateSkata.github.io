@@ -19,6 +19,8 @@ class FunctionEasterEgg{
 var function_easter_eggs = [
     new FunctionEasterEgg("o,a,o,o,o,a", function() {
         var oaoooa_audio = new Audio("https://ayetsg.github.io/files/oaoooa.mp3");
+
+        oaoooa_audio.volume = 0.2;
         oaoooa_audio.play();
     })
 ]
