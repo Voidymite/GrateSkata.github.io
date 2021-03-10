@@ -18,6 +18,8 @@ class FunctionEasterEgg{
 
 var function_easter_eggs = [
     new FunctionEasterEgg("o,a,o,o,o,a", function() {
+        var boyfriend_img = "https://ayetsg.github.io/img/boyfriend.png";
+        var dad_img = "https://ayetsg.github.io/img/dad.png";
         var oaoooa_audio = new Audio("https://ayetsg.github.io/files/oaoooa.mp3");
 
         oaoooa_audio.volume = 0.2;
