@@ -23,7 +23,8 @@ var function_easter_eggs = [
         var ov_img = document.createElement("img");
         var boyfriend_img_path = "https://ayetsg.github.io/img/boyfriend.png";
         var dad_img_path = "https://ayetsg.github.io/img/dad.png";
-        var oaoooa_audio = new Audio("https://ayetsg.github.io/files/oaoooa.mp3");
+        var oaoooa_dad_audio = new Audio("https://ayetsg.github.io/files/oaoooa_dad.mp3");
+        var oaoooa_bf_audio = new Audio("https://ayetsg.github.io/files/oaoooa_bf.mp3");
         var overlay_div = document.createElement("div");
 
         var bf_active = false;
@@ -36,20 +37,19 @@ var function_easter_eggs = [
         document.body.appendChild(overlay_div);
 
         // play the audio
-        oaoooa_audio.volume = 0.2;
+        oaoooa_dad_audio.volume = 0.2;
+        oaoooa_bf_audio.volume = 0.2;
         oaoooa_audio.play();
 
-        oaoooa_audio.ontimeupdate = function(e) {
-            if (e.timeStamp >= 3500) {
-                if (bf_active == false) {
-                    ov_img.src = boyfriend_img_path;
-                    bf_active = true;
-                }
-            }
+        // when the audio ends, remove the overlay
+        oaoooa_dad_audio.onended = function() {
+            ov_img.src = boyfriend_img_path;
+            bf_active = true;
+            
+            oaoooa_bf_audio.play();
         }
 
-        // when the audio ends, remove the overlay
-        oaoooa_audio.onended = function() {
+        oaoooa_bf_audio.onended = function() {
             overlay_div.remove();
         }
     })
