@@ -15,6 +15,38 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
         <script src="js/easter_egg_handler.js"></script>
 
+        <!-- Egg list script -->
+        <script>
+            // wait for window dom to load before doing any of this bullshit
+            window.addEventListener("load", function() {
+                var anyEggsFound = false;
+
+                // loop over all localstorage items
+                for (item in localStorage) {
+                    if (item.toString().startsWith("egg_")) {
+                        // we found a discovered egg!
+                        anyEggsFound = true;
+                        friendlyEggName = item.replace("egg_", "");
+                        console.log("EggList: Found " + friendlyEggName);
+
+                        // append it to the list
+                        var egg_list_item = document.createElement("li");
+                        egg_list_item.innerText = friendlyEggName;
+
+                        document.getElementById("egg_list").appendChild(egg_list_item);
+                    }
+                }
+
+                // if we didnt find any eggs
+                if (anyEggsFound == false) {
+                    var text_noEggsFound = document.createElement("li");
+                    text_noEggsFound.innerText = "None yet! Try hunting for some!";
+
+                    document.getElementById("egg_list").appendChild(text_noEggsFound);
+                }
+            });
+        </script>
+
         <link rel="stylesheet" href="css/index.css">
 
         <meta property="og:title" content="AyeTSG" />
@@ -57,6 +89,11 @@
                 <li><a href="http://thatmikeflynn.com/egg.js/">Egg.js</a></li>
                 <li><a href="https://jquery.com/">jQuery</a></li>
                 <li><a href="https://popper.js.org/">Popper</a></li>
+            </ul>
+            <h1>Discovered Easter Eggs</h1>
+            <p>Easter eggs that you've discovered on the site!</p>
+            <ul id="egg_list">
+
             </ul>
         </div>
     </body>
