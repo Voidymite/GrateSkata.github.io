@@ -1,14 +1,8 @@
-class RedirectEasterEgg {
-    constructor(pattern, url) {
-        this.pattern = pattern;
-        this.url = url;
-    }
-};
-
 class FunctionEasterEgg{
     constructor(pattern, func) {
         this.pattern = pattern;
         this.func = func;
+        this.unlocked = false;
     }
 
     exec() {
@@ -19,6 +13,21 @@ class FunctionEasterEgg{
 var oaoooa_active = false;
 
 var function_easter_eggs = [
+    // == crouton ==
+    new FunctionEasterEgg("c,r,o,u,t,o,n", function() {
+        window.location.replace("https://crouton.net");
+    }),
+
+    // == mcrib ==
+    new FunctionEasterEgg("m,c,r,i,b", function() {
+        window.location.replace("https://twitter.com/PointyyESM/status/1364715306611073032");
+    }),
+
+    // == mrburns ==
+    new FunctionEasterEgg("m,r,b,u,r,n,s", function() {
+        window.location.replace("https://www.youtube.com/watch?v=RtJ9YB-wTqw");
+    }),
+
     // == oaoooa ==
     new FunctionEasterEgg("o,a,o,o,o,a", function() {
         if (oaoooa_active === false) {
@@ -58,30 +67,24 @@ var function_easter_eggs = [
                 oaoooa_active = false;
             }
         }
+    }),
+
+    // == senpai ==
+    new FunctionEasterEgg("s,e,n,p,a,i", function() {
+        window.location.replace("https://ayetsg.github.io/files/senpai_is_real.mp4");
+    }),
+
+    // == sus ==
+    new FunctionEasterEgg("s,u,s", function() {
+        window.location.replace("https://whentheimposteriss.us");
     })
 ]
 
-var redirect_easter_eggs = [
-    new RedirectEasterEgg("c,r,o,u,t,o,n", "https://crouton.net"),
-    new RedirectEasterEgg("m,c,r,i,b", "https://twitter.com/PointyyESM/status/1364715306611073032"),
-    new RedirectEasterEgg("m,r,b,u,r,n,s", "https://www.youtube.com/watch?v=RtJ9YB-wTqw"),
-    new RedirectEasterEgg("s,e,n,p,a,i", "https://ayetsg.github.io/files/senpai_is_real.mp4"),
-    new RedirectEasterEgg("s,u,s", "https://whentheimposteriss.us")
-]
-
 var egg_f = new Egg();
-var egg_r = new Egg();
-
 for (let func of function_easter_eggs) {
     egg_f.addCode(func.pattern, function() {
-        console.log("EasterEggHandler: Executing " + func.pattern);
+        console.log("EasterEggHandler: Executing " + func.pattern.replaceAll(",", ""));
 
         func.exec();
-    }).listen();
-}
-
-for (let redirect of redirect_easter_eggs) {
-    egg_r.addCode(redirect.pattern, function() {
-        window.location.replace(redirect.url);
     }).listen();
 }
