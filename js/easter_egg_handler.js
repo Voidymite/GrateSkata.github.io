@@ -3,10 +3,19 @@ class FunctionEasterEgg{
         this.pattern = pattern;
         this.func = func;
         this.unlocked = false;
+
+        this.friendlyPattern = this.pattern.replaceAll(",", "");
     }
 
     exec() {
+        this.setUnlocked(true);
         this.func();
+    }
+
+    setUnlocked(status) {
+        this.unlocked = status;
+
+        localStorage.setItem(this.friendlyPattern, this.unlocked);
     }
 };
 
@@ -83,7 +92,7 @@ var function_easter_eggs = [
 var egg_f = new Egg();
 for (let func of function_easter_eggs) {
     egg_f.addCode(func.pattern, function() {
-        console.log("EasterEggHandler: Executing " + func.pattern.replaceAll(",", ""));
+        console.log("EasterEggHandler: Executing " + func.friendlyPattern);
 
         func.exec();
     }).listen();
