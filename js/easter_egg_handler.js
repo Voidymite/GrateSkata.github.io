@@ -39,7 +39,7 @@ var function_easter_eggs = [
         // play the audio
         oaoooa_dad_audio.volume = 0.2;
         oaoooa_bf_audio.volume = 0.2;
-        oaoooa_audio.play();
+        oaoooa_dad_audio.play();
 
         // when the audio ends, remove the overlay
         oaoooa_dad_audio.onended = function() {
