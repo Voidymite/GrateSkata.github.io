@@ -17,13 +17,41 @@ class FunctionEasterEgg{
 };
 
 var function_easter_eggs = [
+    // == oaoooa ==
     new FunctionEasterEgg("o,a,o,o,o,a", function() {
-        var boyfriend_img = "https://ayetsg.github.io/img/boyfriend.png";
-        var dad_img = "https://ayetsg.github.io/img/dad.png";
+        // setup shit
+        var ov_img = document.createElement("img");
+        var boyfriend_img_path = "https://ayetsg.github.io/img/boyfriend.png";
+        var dad_img_path = "https://ayetsg.github.io/img/dad.png";
         var oaoooa_audio = new Audio("https://ayetsg.github.io/files/oaoooa.mp3");
+        var overlay_div = document.createElement("div");
 
+        var bf_active = false;
+
+        overlay_div.style = "z-index: 2; position: absolute; top: 50%; left: 50%; text-align: center; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(75%, 75%);"
+
+        overlay_div.id = "overlay";
+        ov_img.src = dad_img_path;
+        overlay_div.appendChild(ov_img);
+        document.body.appendChild(overlay_div);
+
+        // play the audio
         oaoooa_audio.volume = 0.2;
         oaoooa_audio.play();
+
+        oaoooa_audio.ontimeupdate = function(e) {
+            if (e.timeStamp >= 3500) {
+                if (bf_active == false) {
+                    ov_img.src = boyfriend_img_path;
+                    bf_active = true;
+                }
+            }
+        }
+
+        // when the audio ends, remove the overlay
+        oaoooa_audio.onended = function() {
+            overlay_div.remove();
+        }
     })
 ]
 
