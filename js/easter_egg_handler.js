@@ -4,7 +4,7 @@ class FunctionEasterEgg{
         this.func = func;
         this.unlocked = false;
 
-        this.friendlyPattern = this.pattern.replaceAll(",", "");
+        this.friendlyPattern = "egg_" + this.pattern.replaceAll(",", "");
     }
 
     exec() {
