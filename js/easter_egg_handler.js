@@ -22,6 +22,11 @@ class FunctionEasterEgg{
 var oaoooa_active = false;
 
 var function_easter_eggs = [
+    // == believe ==
+    new FunctionEasterEgg("b,e,l,i,e,v,e", function() {
+        window.location.replace("https://www.youtube.com/watch?v=7f2wg1pqQDs");
+    }),
+
     // == crouton ==
     new FunctionEasterEgg("c,r,o,u,t,o,n", function() {
         window.location.replace("https://crouton.net");
