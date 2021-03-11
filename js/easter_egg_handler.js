@@ -93,6 +93,8 @@ var function_easter_eggs = [
         window.location.replace("https://whentheimposteriss.us");
     }),
 
+    // == ugh ==
+    // (expand on this once week 7 assets are released, wanna do something similiar to the oaoooa)
     new FunctionEasterEgg("u,g,h", function() {
         window.location.replace("https://www.youtube.com/watch?v=_pLDBCkvyUg");
     })
