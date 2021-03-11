@@ -91,6 +91,10 @@ var function_easter_eggs = [
     // == sus ==
     new FunctionEasterEgg("s,u,s", function() {
         window.location.replace("https://whentheimposteriss.us");
+    }),
+
+    new FunctionEasterEgg("u,g,h", function() {
+        window.location.replace("https://www.youtube.com/watch?v=_pLDBCkvyUg");
     })
 ]
 
