@@ -30,8 +30,7 @@
                             function_easter_eggs.filter(obj => {return obj.friendlyPattern === item})[0].friendlyPattern;
                         } catch {
                             console.log("EggList: Found INVALID egg: " + item);
-
-                            // [TODO]: if the egg entry is invalid, remove it from the user storage
+                            localStorage.removeItem(item);
 
                             continue;
                         }
