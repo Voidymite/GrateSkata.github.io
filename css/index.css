@@ -1,5 +1,4 @@
 .egg_name {
-    /* TODO: Style the egg names separately so we can add stylish descriptions and shit to them later */
     border: 1px solid gray;
     border-radius: 5px;
     background: lightgray;

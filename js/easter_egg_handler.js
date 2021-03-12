@@ -102,7 +102,7 @@ var function_easter_eggs = [
 
     // == ugh ==
     // (expand on this once week 7 assets are released, wanna do something similiar to the oaoooa)
-    new FunctionEasterEgg("u,g,h", "It's Tankman!", function() {
+    new FunctionEasterEgg("u,g,h", "Aw jeez 'Cap!", function() {
         if (tankman_active === false) {
             tankman_active = true;
 

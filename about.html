@@ -18,8 +18,6 @@
 
         <!-- Egg list script -->
         <script>
-            // TODO: make sure that entries that are found are actually VALID.
-
             // wait for window dom to load before doing any of this bullshit
             window.addEventListener("load", function() {
                 var anyEggsFound = false;
@@ -27,6 +25,14 @@
                 // loop over all localstorage items
                 for (item in localStorage) {
                     if (item.toString().startsWith("egg_")) {
+                        // check if egg is valid
+                        try {
+                            function_easter_eggs.filter(obj => {return obj.friendlyPattern === item})[0].friendlyPattern;
+                        } catch {
+                            console.log("EggList: Found INVALID egg: " + item);
+                            continue;
+                        }
+
                         // we found a discovered egg!
                         anyEggsFound = true;
                         friendlyEggName = item.replace("egg_", "");
