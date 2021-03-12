@@ -28,6 +28,36 @@ class FunctionEasterEgg{
 var overlay_active = false;
 
 var function_easter_eggs = [
+    // == monster ==
+    new FunctionEasterEgg("m,o,n,s,t,e,r", "Hey man, I'm gonna eat your girlfriend!", function() {
+        if (overlay_active === false) {
+            overlay_active = true;
+
+            // setup shit
+            var ov_img = document.createElement("img");
+            var monster_img_path = "https://ayetsg.github.io/img/monster_idle.gif";
+            var monster_audio = new Audio("https://ayetsg.github.io/files/monster_snippet.mp3");
+            var overlay_div = document.createElement("div");
+
+            overlay_div.style = "z-index: 2; position: absolute; top: 50%; left: 50%; text-align: center; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(75%, 75%);"
+
+            overlay_div.id = "overlay";
+            ov_img.src = monster_img_path;
+            overlay_div.appendChild(ov_img);
+            document.body.appendChild(overlay_div);
+
+            // play the audio
+            monster_audio.volume = 0.2;
+            monster_audio.play();
+
+            // when the audio ends, remove the overlay
+            monster_audio.onended = function() {
+                overlay_div.remove();
+                overlay_active = false;
+            }
+        }
+    }),
+
     // == oaoooa ==
     new FunctionEasterEgg("o,a,o,o,o,a", "Bopeebo!", function() {
         if (overlay_active === false) {
