@@ -37,14 +37,13 @@
                         var egg_list_text = document.createElement("span");
                         var egg_list_description_text = document.createElement("span");
                         egg_list_text.innerText = friendlyEggName;
-                        // [TODO]: make this pull from the actual description property on eggs
-                        // egg_list_description_text.innerText = ": " + "[placeholder]";
+                        egg_list_description_text.innerText = ": " + function_easter_eggs.filter(obj => {return obj.friendlyPattern === item})[0].description;
 
                         egg_list_text.classList.add("egg_name");
                         egg_list_item.classList.add("egg_holder");
 
                         egg_list_item.appendChild(egg_list_text);
-                        // egg_list_item.appendChild(egg_list_description_text);
+                        egg_list_item.appendChild(egg_list_description_text);
                         document.getElementById("egg_list").appendChild(egg_list_item);
                     }
                 }
