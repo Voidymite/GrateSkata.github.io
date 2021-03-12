@@ -25,8 +25,7 @@ class FunctionEasterEgg{
     }
 };
 
-var oaoooa_active = false;
-var tankman_active = false;
+var overlay_active = false;
 
 var function_easter_eggs = [
     // == believe ==
@@ -51,8 +50,8 @@ var function_easter_eggs = [
 
     // == oaoooa ==
     new FunctionEasterEgg("o,a,o,o,o,a", "Bopeebo!", function() {
-        if (oaoooa_active === false) {
-            oaoooa_active = true;
+        if (overlay_active === false) {
+            overlay_active = true;
 
             // setup shit
             var ov_img = document.createElement("img");
@@ -85,7 +84,7 @@ var function_easter_eggs = [
 
             oaoooa_bf_audio.onended = function() {
                 overlay_div.remove();
-                oaoooa_active = false;
+                overlay_active = false;
             }
         }
     }),
@@ -103,8 +102,8 @@ var function_easter_eggs = [
     // == ugh ==
     // (expand on this once week 7 assets are released, wanna do something similiar to the oaoooa)
     new FunctionEasterEgg("u,g,h", "Aw jeez 'Cap!", function() {
-        if (tankman_active === false) {
-            tankman_active = true;
+        if (overlay_active === false) {
+            overlay_active = true;
 
             // setup shit
             var ov_img = document.createElement("img");
@@ -126,7 +125,7 @@ var function_easter_eggs = [
             // when the audio ends, remove the overlay
             ugh_audio.onended = function() {
                 overlay_div.remove();
-                tankman_active = false;
+                overlay_active = false;
             }
         }
     })
