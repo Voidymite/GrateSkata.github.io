@@ -28,26 +28,6 @@ class FunctionEasterEgg{
 var overlay_active = false;
 
 var function_easter_eggs = [
-    // == believe ==
-    new FunctionEasterEgg("b,e,l,i,e,v,e", "I needed to believe!", function() {
-        window.location.replace("https://www.youtube.com/watch?v=7f2wg1pqQDs");
-    }),
-
-    // == crouton ==
-    new FunctionEasterEgg("c,r,o,u,t,o,n", "Have a crouton!", function() {
-        window.location.replace("https://crouton.net");
-    }),
-
-    // == mcrib ==
-    new FunctionEasterEgg("m,c,r,i,b", "Do you like the McRib?", function() {
-        window.location.replace("https://twitter.com/PointyyESM/status/1364715306611073032");
-    }),
-
-    // == mrburns ==
-    new FunctionEasterEgg("m,r,b,u,r,n,s", "MR BURNS!! AUGH!!", function() {
-        window.location.replace("https://www.youtube.com/watch?v=RtJ9YB-wTqw");
-    }),
-
     // == oaoooa ==
     new FunctionEasterEgg("o,a,o,o,o,a", "Bopeebo!", function() {
         if (overlay_active === false) {
@@ -87,16 +67,6 @@ var function_easter_eggs = [
                 overlay_active = false;
             }
         }
-    }),
-
-    // == senpai ==
-    new FunctionEasterEgg("s,e,n,p,a,i", "Holy shit, he's real!", function() {
-        window.location.replace("https://ayetsg.github.io/files/senpai_is_real.mp4");
-    }),
-
-    // == sus ==
-    new FunctionEasterEgg("s,u,s", "When the imposter is sus!", function() {
-        window.location.replace("https://whentheimposteriss.us");
     }),
 
     // == ugh ==
