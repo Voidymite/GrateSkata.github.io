@@ -20,6 +20,7 @@ class FunctionEasterEgg{
 };
 
 var oaoooa_active = false;
+var tankman_active = false;
 
 var function_easter_eggs = [
     // == believe ==
@@ -96,7 +97,32 @@ var function_easter_eggs = [
     // == ugh ==
     // (expand on this once week 7 assets are released, wanna do something similiar to the oaoooa)
     new FunctionEasterEgg("u,g,h", function() {
-        window.location.replace("https://www.youtube.com/watch?v=_pLDBCkvyUg");
+        if (tankman_active === false) {
+            tankman_active = true;
+
+            // setup shit
+            var ov_img = document.createElement("img");
+            var tankman_img_path = "https://ayetsg.github.io/img/tankman.png";
+            var ugh_audio = new Audio("https://ayetsg.github.io/files/ugh_snippet.mp3");
+            var overlay_div = document.createElement("div");
+
+            overlay_div.style = "z-index: 2; position: absolute; top: 50%; left: 50%; text-align: center; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(75%, 75%);"
+
+            overlay_div.id = "overlay";
+            ov_img.src = tankman_img_path;
+            overlay_div.appendChild(ov_img);
+            document.body.appendChild(overlay_div);
+
+            // play the audio
+            ugh_audio.volume = 0.2;
+            ugh_audio.play();
+
+            // when the audio ends, remove the overlay
+            ugh_audio.onended = function() {
+                overlay_div.remove();
+                tankman_active = false;
+            }
+        }
     })
 ]
 
