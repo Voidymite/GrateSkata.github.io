@@ -1,8 +1,10 @@
 class FunctionEasterEgg{
-    constructor(pattern, func) {
+    constructor(pattern, description, func) {
         this.pattern = pattern;
         this.func = func;
         this.unlocked = false;
+
+        this.description = description;
 
         this.friendlyPattern = "egg_" + this.pattern.replaceAll(",", "");
     }
@@ -10,6 +12,10 @@ class FunctionEasterEgg{
     exec() {
         this.setUnlocked(true);
         this.func();
+    }
+
+    setDescription(desc) {
+        this.description = desc;
     }
 
     setUnlocked(status) {
@@ -24,27 +30,27 @@ var tankman_active = false;
 
 var function_easter_eggs = [
     // == believe ==
-    new FunctionEasterEgg("b,e,l,i,e,v,e", function() {
+    new FunctionEasterEgg("b,e,l,i,e,v,e", "I needed to believe!", function() {
         window.location.replace("https://www.youtube.com/watch?v=7f2wg1pqQDs");
     }),
 
     // == crouton ==
-    new FunctionEasterEgg("c,r,o,u,t,o,n", function() {
+    new FunctionEasterEgg("c,r,o,u,t,o,n", "Have a crouton!", function() {
         window.location.replace("https://crouton.net");
     }),
 
     // == mcrib ==
-    new FunctionEasterEgg("m,c,r,i,b", function() {
+    new FunctionEasterEgg("m,c,r,i,b", "Do you like the McRib?", function() {
         window.location.replace("https://twitter.com/PointyyESM/status/1364715306611073032");
     }),
 
     // == mrburns ==
-    new FunctionEasterEgg("m,r,b,u,r,n,s", function() {
+    new FunctionEasterEgg("m,r,b,u,r,n,s", "MR BURNS!! AUGH!!", function() {
         window.location.replace("https://www.youtube.com/watch?v=RtJ9YB-wTqw");
     }),
 
     // == oaoooa ==
-    new FunctionEasterEgg("o,a,o,o,o,a", function() {
+    new FunctionEasterEgg("o,a,o,o,o,a", "Bopeebo!", function() {
         if (oaoooa_active === false) {
             oaoooa_active = true;
 
@@ -85,18 +91,18 @@ var function_easter_eggs = [
     }),
 
     // == senpai ==
-    new FunctionEasterEgg("s,e,n,p,a,i", function() {
+    new FunctionEasterEgg("s,e,n,p,a,i", "Holy shit, he's real!", function() {
         window.location.replace("https://ayetsg.github.io/files/senpai_is_real.mp4");
     }),
 
     // == sus ==
-    new FunctionEasterEgg("s,u,s", function() {
+    new FunctionEasterEgg("s,u,s", "When the imposter is sus!", function() {
         window.location.replace("https://whentheimposteriss.us");
     }),
 
     // == ugh ==
     // (expand on this once week 7 assets are released, wanna do something similiar to the oaoooa)
-    new FunctionEasterEgg("u,g,h", function() {
+    new FunctionEasterEgg("u,g,h", "It's Tankman!", function() {
         if (tankman_active === false) {
             tankman_active = true;
 
