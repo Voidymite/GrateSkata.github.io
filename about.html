@@ -59,7 +59,7 @@
                 // if we didnt find any eggs
                 if (anyEggsFound == false) {
                     var text_noEggsFound = document.createElement("li");
-                    text_noEggsFound.innerHTML = "<i>None yet! Try hunting for some!</i>";
+                    text_noEggsFound.innerHTML = "<i>None yet! Try hunting for some! Have a free one! </i><span class='egg_name'>monster</span>";
 
                     document.getElementById("egg_list").appendChild(text_noEggsFound);
                 }
@@ -130,6 +130,7 @@
                 <li><a href="https://jquery.com/">jQuery</a></li>
                 <li><a href="https://popper.js.org/">Popper</a></li>
             </ul>
+            <!-- TODO: Isolate this to a separate page at some point -->
             <h1>Discovered Easter Eggs</h1>
             <p>Easter eggs that you've discovered on the site! Easter eggs on this site are a series of keystrokes, for example, if you type "test", and it is a valid easter egg, it will show up here!</p>
             <ul id="egg_list">
