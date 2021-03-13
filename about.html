@@ -18,8 +18,7 @@
 
         <!-- Egg list script -->
         <script>
-            // wait for window dom to load before doing any of this bullshit
-            window.addEventListener("load", function() {
+            function initList() {
                 var anyEggsFound = false;
 
                 // loop over all localstorage items
@@ -84,6 +83,15 @@
                         switching = true;
                     }
                 }
+            }
+            
+            function clearList() {
+                document.getElementById("egg_list").innerHTML = "";
+            }
+
+            window.addEventListener("load", function() {
+                // init list
+                initList();
             });
         </script>
 
