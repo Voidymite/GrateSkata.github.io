@@ -40,6 +40,7 @@ window.addEventListener("load", function() {
         unit_desc.innerText = ": " + reference_this.description;
 
         // set class names
+        unit_item.classList.add("unit_item");
         unit_name.classList.add("unit_entry_name");
         unit_icon.classList.add("unit_img");
 

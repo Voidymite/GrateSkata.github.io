@@ -7,5 +7,11 @@
 }
 
 .unit_img {
+    display: block;
+    width: 64px;
     margin: 5px;
+}
+
+.unit_item {
+    margin: 15px;
 }
