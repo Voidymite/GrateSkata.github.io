@@ -41,6 +41,7 @@ window.addEventListener("load", function() {
 
         // set class names
         unit_name.classList.add("unit_entry_name");
+        unit_icon.classList.add("unit_img");
 
         // layer them in dom
         unit_item.appendChild(unit_icon);
