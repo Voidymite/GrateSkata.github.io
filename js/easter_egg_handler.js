@@ -35,7 +35,7 @@ var function_easter_eggs = [
 
             // setup shit
             var ov_img = document.createElement("img");
-            var monster_img_path = "https://ayetsg.github.io/img/monster_idle.gif";
+            var monster_img_path = "https://ayetsg.github.io/projects/monster/img/monster_idle.gif";
             var monster_audio = new Audio("https://ayetsg.github.io/files/monster_snippet.mp3");
             var overlay_div = document.createElement("div");
 
