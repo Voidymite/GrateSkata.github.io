@@ -25,13 +25,13 @@ class FunctionEasterEgg{
     }
 };
 
-var overlay_active = false;
+var egg_currently_playing = false;
 
 var function_easter_eggs = [
     // == monster ==
     new FunctionEasterEgg("m,o,n,s,t,e,r", "Hey man, I'm gonna eat your girlfriend!", function() {
-        if (overlay_active === false) {
-            overlay_active = true;
+        if (egg_currently_playing === false) {
+            egg_currently_playing = true;
 
             // setup shit
             var ov_img = document.createElement("img");
@@ -53,15 +53,15 @@ var function_easter_eggs = [
             // when the audio ends, remove the overlay
             monster_audio.onended = function() {
                 overlay_div.remove();
-                overlay_active = false;
+                egg_currently_playing = false;
             }
         }
     }),
 
     // == oaoooa ==
     new FunctionEasterEgg("o,a,o,o,o,a", "Bopeebo!", function() {
-        if (overlay_active === false) {
-            overlay_active = true;
+        if (egg_currently_playing === false) {
+            egg_currently_playing = true;
 
             // setup shit
             var ov_img = document.createElement("img");
@@ -94,7 +94,7 @@ var function_easter_eggs = [
 
             oaoooa_bf_audio.onended = function() {
                 overlay_div.remove();
-                overlay_active = false;
+                egg_currently_playing = false;
             }
         }
     }),
@@ -102,8 +102,8 @@ var function_easter_eggs = [
     // == ugh ==
     // (expand on this once week 7 assets are released, wanna do something similiar to the oaoooa)
     new FunctionEasterEgg("u,g,h", "Aw jeez 'Cap!", function() {
-        if (overlay_active === false) {
-            overlay_active = true;
+        if (egg_currently_playing === false) {
+            egg_currently_playing = true;
 
             // setup shit
             var ov_img = document.createElement("img");
@@ -125,7 +125,22 @@ var function_easter_eggs = [
             // when the audio ends, remove the overlay
             ugh_audio.onended = function() {
                 overlay_div.remove();
-                overlay_active = false;
+                egg_currently_playing = false;
+            }
+        }
+    }),
+
+    // == sus ==
+    new FunctionEasterEgg("s,u,s", "Who's the imposter?", function() {
+        if (egg_currently_playing == false) {
+            egg_currently_playing = true;
+            var sus_audio = new Audio("https://ayetsg.github.io/files/SFX_AmongUs_Thud.mp3");
+
+            sus_audio.volume = 0.2;
+            sus_audio.play();
+
+            sus_audio.onended = function() {
+                egg_currently_playing = false;
             }
         }
     })
