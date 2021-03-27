@@ -1,3 +1,8 @@
+/*
+    == TODO ==
+    - Rework overlay code, as it doesn't show in the center for all browsers
+*/
+
 class FunctionEasterEgg{
     constructor(pattern, description, func) {
         this.pattern = pattern;
