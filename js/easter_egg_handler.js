@@ -36,7 +36,7 @@ var function_easter_eggs = [
             // setup shit
             var ov_img = document.createElement("img");
             var monster_img_path = "https://ayetsg.github.io/projects/monster/img/monster_idle.gif";
-            var monster_audio = new Audio("https://ayetsg.github.io/files/monster_snippet.mp3");
+            var monster_audio = new Audio("https://ayetsg.github.io/files/audio/music/MUSIC_Monster_Snippet.mp3");
             var overlay_div = document.createElement("div");
 
             overlay_div.style = "z-index: 2; position: absolute; top: 50%; left: 50%; text-align: center; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(75%, 75%);"
@@ -67,8 +67,8 @@ var function_easter_eggs = [
             var ov_img = document.createElement("img");
             var boyfriend_img_path = "https://ayetsg.github.io/img/boyfriend.png";
             var dad_img_path = "https://ayetsg.github.io/img/dad.png";
-            var oaoooa_dad_audio = new Audio("https://ayetsg.github.io/files/oaoooa_dad.mp3");
-            var oaoooa_bf_audio = new Audio("https://ayetsg.github.io/files/oaoooa_bf.mp3");
+            var oaoooa_dad_audio = new Audio("https://ayetsg.github.io/files/audio/music/MUSIC_Bopeebo_Oaoooa_Dad.mp3");
+            var oaoooa_bf_audio = new Audio("https://ayetsg.github.io/files/audio/music/MUSIC_Bopeebo_Oaoooa_BF.mp3");
             var overlay_div = document.createElement("div");
             var bf_active = false;
 
@@ -108,7 +108,7 @@ var function_easter_eggs = [
             // setup shit
             var ov_img = document.createElement("img");
             var tankman_img_path = "https://ayetsg.github.io/img/tankman.png";
-            var ugh_audio = new Audio("https://ayetsg.github.io/files/ugh_snippet.mp3");
+            var ugh_audio = new Audio("https://ayetsg.github.io/files/audio/music/MUSIC_Ugh_Snippet.mp3");
             var overlay_div = document.createElement("div");
 
             overlay_div.style = "z-index: 2; position: absolute; top: 50%; left: 50%; text-align: center; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(75%, 75%);"
@@ -134,7 +134,7 @@ var function_easter_eggs = [
     new FunctionEasterEgg("s,u,s", "Who's the imposter?", function() {
         if (egg_currently_playing == false) {
             egg_currently_playing = true;
-            var sus_audio = new Audio("https://ayetsg.github.io/files/SFX_AmongUs_Thud.mp3");
+            var sus_audio = new Audio("https://ayetsg.github.io/files/audio/sfx/SFX_AmongUs_Thud.mp3");
 
             sus_audio.volume = 0.2;
             sus_audio.play();
