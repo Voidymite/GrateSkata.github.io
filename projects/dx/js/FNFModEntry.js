@@ -8,5 +8,33 @@ class FNFMod {
 
 _FNF_MODS = [
     // FNF Mod: Small Things
-    new FNFMod("FNF Small Things", "https://ayetsg.github.io/projects/dx/img/mods/st/thumbnail.png", null)
+    new FNFMod("FNF Small Things", "https://ayetsg.github.io/projects/dx/img/mods/st/thumbnail.png", "https://gamebanana.com/mods/44515")
 ]
+
+function addModsToDocument() {
+    _FNF_MODS.forEach(function(item, index) {
+        var list_item = document.createElement('li');
+        var list_image = document.createElement('a');
+        var list_details = document.createElement('div');
+        var list_title_holder = document.createElement('h3');
+        var list_title_url = document.createElement('a');
+
+        // set properties
+        list_image.href = item.page_url;
+        list_title_url.href = item.page_url;
+        list_title_url.innerText = item.name;
+        list_image.style = "background-image: url('" + item.thumbnail_url + "');";
+        list_details.classList.add("mod_details");
+
+        // add to document
+        list_title_holder.appendChild(list_title_url);
+        list_details.appendChild(list_title_holder);
+        list_item.appendChild(list_image);
+        list_item.appendChild(list_details);
+        document.getElementById("mod_list").appendChild(list_item);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    addModsToDocument();
+});
