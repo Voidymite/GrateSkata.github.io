@@ -7,8 +7,9 @@ class FNFMod {
 }
 
 _FNF_MODS = [
-    // FNF Mod: Small Things
-    new FNFMod("FNF Small Things", "https://ayetsg.github.io/projects/dx/img/mods/st/thumbnail.png", "https://gamebanana.com/mods/44515")
+    new FNFMod("FNF Cinopack", "https://ayetsg.github.io/projects/dx/img/mods/cinopack/thumbnail.png", "https://gamebanana.com/mods/42833"),
+    new FNFMod("FNF Small Things", "https://ayetsg.github.io/projects/dx/img/mods/st/thumbnail.png", "https://gamebanana.com/mods/44515"),
+    new FNFMod("FNF VS Kiryu", "https://ayetsg.github.io/projects/dx/img/mods/kiryu/thumbnail.png", "https://gamebanana.com/mods/249504")
 ]
 
 function addModsToDocument() {
