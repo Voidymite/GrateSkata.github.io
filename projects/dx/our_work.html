@@ -6,15 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        
+
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
 
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
+        <script type="text/javascript" src="js/FNFModEntry.js"></script>
 
         <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/mod_list.css">
 
         <meta property="og:title" content="DX Studios" />
         <meta property="og:description" content="Mod studio creating FNF Mods" />
@@ -33,28 +35,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="our_work.html">Our Work</a>
+                    <a class="nav-item nav-link active" href="our_work.html">Our Work</a>
                 </div>
             </div>
         </nav>
 
         <div class="container-fluid">
-            <h1>Welcome to DX Studios!</h1>
-            <p>Here you'll find all of our modding work we've done for Friday Night Funkin'!</p>
-            <br>
-            <h1>Who are we?</h1>
-            <p>We are a team of Artists, Musicians, and Programmers all coming together to create unique and original mods for Friday Night Funkin'. Below is a list of all of our current team members</p>
-            <ul>
-                <li>AetherDX (Director)</li>
-                <li>AyeTSG (Co-Director / Programmer)</li>
-                <li>azereii (Artist)</li>
-                <li>f3nnykins (Artist)</li>
-                <li>Kallionic (Musician)</li>
-                <li>Kazolzen (Artist)</li>
-                <li>Matt$ (Musician)</li>
-                <li>SodaReishii (Artist)</li>
-                <li>TokyoGalaxy (Artist)</li>
-                <li>vomic (Artist)</li>
+            <h1>Our Work</h1>
+            <p>Below is a list of all of our current projects we've worked on or are working on!</p>
+
+            <ul id="mod_list" class="mod_list">
+
             </ul>
         </div>
     </body>
