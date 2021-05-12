@@ -1,0 +1,21 @@
+#mod_thumbnail {
+    display: block;
+    float: left;
+    margin-top: 12px;
+    margin-right: 16px;
+    width: 128x;
+    height: 128px;
+    border-radius: 4px;
+    border: 4px solid #ffffff;
+    outline: 1px solid #d0d0d0;
+    box-shadow: 0 2px 1px #DDD;
+}
+
+#mod_publish_date {
+    font-size: 12px;
+    font-style: italic;
+}
+
+#mod_desc {
+    font-size: 22px;
+}
