@@ -42,6 +42,18 @@ _FNF_MODS = [
         "small_things"
     ),
 
+    // VS Cyrix
+    new FNFMod(
+        "Friday Night Funkin': VS Cyrix",
+        "As word spreads of your many adventures, a message comes in from the music producer Cyrix! He wants you in his studio, and is ready to mix up some new tracks! You ready to get funky?",
+        "???",
+        "https://ayetsg.github.io/projects/dx/img/mods/cyrix/thumbnail.png",
+        [
+
+        ],
+        "vs_cyrix"
+    ),
+
     // VS Kiryu
     new FNFMod(
         "Friday Night Funkin': VS Kiryu",
