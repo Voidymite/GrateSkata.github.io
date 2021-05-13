@@ -12,6 +12,7 @@ _FNF_MODS = [
     new FNFMod("???", "https://ayetsg.github.io/projects/dx/img/mods/tbd.png", "#"),
     new FNFMod("FNF VS Cyrix", "https://ayetsg.github.io/projects/dx/img/mods/cyrix/thumbnail.png", "https://ayetsg.github.io/projects/dx/work/vs_cyrix.html"),
     new FNFMod("FNF VS Kiryu", "https://ayetsg.github.io/projects/dx/img/mods/kiryu/thumbnail.jpg", "https://ayetsg.github.io/projects/dx/work/vs_kiryu.html"),
+    new FNFMod("???", "https://ayetsg.github.io/projects/dx/img/mods/tbd.png", "#"),
     new FNFMod("???", "https://ayetsg.github.io/projects/dx/img/mods/tbd_blue.png", "#")
 ]
 
