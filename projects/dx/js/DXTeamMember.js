@@ -157,6 +157,16 @@ _TEAM_MEMBERS = [
         [
             new TwitterLink("https://twitter.com/theawesomefart")
         ]
+    ),
+
+    // Zeexel
+    new DXTeamMember(
+        "Zeexel",
+        "Programmer",
+        [
+            new TwitterLink("https://twitter.com/Zeexel32"),
+            new YoutubeLink("https://youtube.com/channel/UCOlgsvCe396K5E9NjfpRLuQ")
+        ]
     )
 ]
 
