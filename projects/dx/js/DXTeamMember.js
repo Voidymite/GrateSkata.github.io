@@ -1,6 +1,3 @@
-// html should be
-// <li>[name] <a href="[twitter_url]" class="btn btn-xs btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a>
-
 class YoutubeLink {
     constructor(url) {
         this.url = url;
@@ -21,6 +18,7 @@ class DXTeamMember {
     }
 }
 
+// list of team members
 _TEAM_MEMBERS = [
     // AetherDX
     new DXTeamMember(
@@ -48,6 +46,16 @@ _TEAM_MEMBERS = [
         "Artist",
         [
             new TwitterLink("https://twitter.com/azereii")
+        ]
+    ),
+
+    // Celeste
+    new DXTeamMember(
+        "Celeste",
+        "Musician",
+        [
+            new TwitterLink("https://twitter.com/PansexualPlanet"),
+            new YoutubeLink("https://youtube.com/channel/UCm3eGs2etEOMzRX0iQ4QzqQ")
         ]
     ),
 
@@ -124,6 +132,15 @@ _TEAM_MEMBERS = [
         ]
     ),
     
+    // The Unnamed Player
+    new DXTeamMember(
+        "The Unnamed Player",
+        "Musician",
+        [
+            new YoutubeLink("https://youtube.com/channel/UCevm42QSRJ40i_mvlzzIyGg")
+        ]
+    ),
+
     // TokyoGalaxy
     new DXTeamMember(
         "TokyoGalaxy",
@@ -142,3 +159,63 @@ _TEAM_MEMBERS = [
         ]
     )
 ]
+
+// insert team member into list on main page
+function insertTeamMemberIntoList(member)
+{
+    // html should be
+    // <li>[name] <a href="[twitter_url]" class="btn btn-xs btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a>
+
+    member = _TEAM_MEMBERS[member];
+
+    var list_item = document.createElement("li");
+    list_item.innerHTML = member.name + " ";
+
+    if (member.links.length != 0) {
+        for (link in member.links) {
+            link = member.links[link];
+
+            if (link.constructor.name == "YoutubeLink") {
+                // yt link behavior
+                var yt_url = document.createElement("a");
+                yt_url.href = link.url;
+                yt_url.classList.add("btn", "btn-xs", "btn-social-icon", "btn-pinterest");
+                
+                var yt_logo = document.createElement("span");
+                yt_logo.classList.add("fa", "fa-youtube");
+
+                yt_url.appendChild(yt_logo);
+
+                list_item.innerHTML = list_item.innerHTML + yt_url.outerHTML;
+            } else if (link.constructor.name == "TwitterLink") {
+                // twitter link behavior
+                var twt_url = document.createElement("a");
+                twt_url.href = link.url;
+                twt_url.classList.add("btn", "btn-xs", "btn-social-icon", "btn-twitter");
+                
+                var twt_logo = document.createElement("span");
+                twt_logo.classList.add("fa", "fa-twitter");
+
+                twt_url.appendChild(twt_logo);
+
+                list_item.innerHTML = list_item.innerHTML + twt_url.outerHTML;
+            }
+        } 
+    }
+
+    list_item.innerHTML = list_item.innerHTML + " (" + member.role + ")"; 
+
+    document.getElementById("team_list").appendChild(list_item);
+}
+
+// document setup
+function setupDocument()
+{
+    for (member in _TEAM_MEMBERS) {
+        insertTeamMemberIntoList(member);
+    }
+}
+
+window.addEventListener("load", function() {
+    setupDocument();
+});
