@@ -24,7 +24,8 @@ _FNF_MODS = [
         "March 6th, 2021",
         "https://ayetsg.github.io/projects/dx/img/mods/cinopack/thumbnail.jpg",
         [
-            new DownloadLink("GameBanana", "https://gamebanana.com/mods/42833")
+            new DownloadLink("GameBanana", "https://gamebanana.com/mods/42833"),
+            new DownloadLink("GitHub Source", "https://github.com/AyeTSG/Funkin_Cinopack_ST")
         ],
         "cinopack"
     ),
@@ -37,7 +38,8 @@ _FNF_MODS = [
         "https://ayetsg.github.io/projects/dx/img/mods/st/thumbnail.png",
         [
             new DownloadLink("GameBanana", "https://gamebanana.com/gamefiles/19575"),
-            new DownloadLink("GitHub", "https://github.com/AyeTSG/Funkin_SmallThings/releases")
+            new DownloadLink("GitHub", "https://github.com/AyeTSG/Funkin_SmallThings/releases"),
+            new DownloadLink("GitHub Source", "https://github.com/AyeTSG/Funkin_SmallThings")
         ],
         "small_things"
     ),
@@ -62,6 +64,7 @@ _FNF_MODS = [
         "https://ayetsg.github.io/projects/dx/img/mods/kiryu/thumbnail.jpg",
         [
             new DownloadLink("GameBanana", "https://gamebanana.com/mods/249504"),
+            new DownloadLink("GitHub Source", "https://github.com/AyeTSG/Funkin_VsKiryu"),
             new DownloadLink("Google Drive", "https://drive.google.com/file/d/1U6KBiU_8FnIz2RpK2HF9NoGckYBTMu-X/view?usp=sharing"),
             new DownloadLink("MEGA", "https://mega.nz/file/SHpyEIZZ#tXWlQisqIBCnkENJcATKuyNAvjBeTL4R6LHIsHDEBf4")
         ],
