@@ -53,8 +53,7 @@ _FNF_MODS = [
         [
             new DownloadLink("GameBanana", "https://gamebanana.com/mods/287411"),
             new DownloadLink("GitHub Source", "https://github.com/AyeTSG/Funkin_VsCyrix"),
-            new DownloadLink("Google Drive", "https://drive.google.com/file/d/1fbEpH_gdl0CkNPjN8q4XP_psI_vZWYvO/view"),
-            new DownloadLink("MEGA", "https://mega.nz/file/jWhAjJJA#QHbacfcTcagV_zwNnqtnyI6shEFuU74TbMLhws03LJU")
+            new DownloadLink("Google Drive", "https://drive.google.com/file/d/1fbEpH_gdl0CkNPjN8q4XP_psI_vZWYvO/view")
         ],
         "vs_cyrix"
     ),
