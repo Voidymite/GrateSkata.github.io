@@ -48,10 +48,13 @@ _FNF_MODS = [
     new FNFMod(
         "Friday Night Funkin': VS Cyrix",
         "As word spreads of your many adventures, a message comes in from the music producer Cyrix! He wants you in his studio, and is ready to mix up some new tracks! You ready to get funky?",
-        "???",
+        "May 18th, 2021",
         "https://ayetsg.github.io/projects/dx/img/mods/cyrix/thumbnail.png",
         [
-
+            new DownloadLink("GameBanana", "https://gamebanana.com/mods/287411"),
+            new DownloadLink("GitHub Source", "https://github.com/AyeTSG/Funkin_VsCyrix"),
+            new DownloadLink("Google Drive", "https://drive.google.com/file/d/1fbEpH_gdl0CkNPjN8q4XP_psI_vZWYvO/view"),
+            new DownloadLink("MEGA", "https://mega.nz/file/jWhAjJJA#QHbacfcTcagV_zwNnqtnyI6shEFuU74TbMLhws03LJU")
         ],
         "vs_cyrix"
     ),
