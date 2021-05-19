@@ -68,12 +68,12 @@ _TEAM_MEMBERS = [
         ]
     ),
     
-    // f3nnykins
+    // fennykinz
     new DXTeamMember(
-        "f3nnykins",
+        "fennykinz",
         "Artist",
         [
-            new TwitterLink("https://twitter.com/f3nnykins")
+            new TwitterLink("https://twitter.com/fennykinz")
         ]
     ),
 
