@@ -39,7 +39,9 @@ _FNF_MODS = [
         [
             new DownloadLink("GameBanana", "https://gamebanana.com/gamefiles/19575"),
             new DownloadLink("GitHub", "https://github.com/AyeTSG/Funkin_SmallThings/releases"),
-            new DownloadLink("GitHub Source", "https://github.com/AyeTSG/Funkin_SmallThings")
+            new DownloadLink("GitHub Source", "https://github.com/AyeTSG/Funkin_SmallThings"),
+            new DownloadLink("Google Drive", "https://drive.google.com/file/d/1yn6oFdBxQ2ktadnoV90i_3fPhCPG6p4s/view?usp=sharing"),
+            new DownloadLink("MEGA", "https://mega.nz/file/DP5iCZiY#QzCJN9JLY7wZoI0EfK-iBonS_esU-wYw0iwQHMGVuBM")
         ],
         "small_things"
     ),
@@ -53,8 +55,8 @@ _FNF_MODS = [
         [
             new DownloadLink("GameBanana", "https://gamebanana.com/mods/287411"),
             new DownloadLink("GitHub Source", "https://github.com/AyeTSG/Funkin_VsCyrix"),
-            new DownloadLink("Google Drive", "https://drive.google.com/file/d/117jOySmzxytiBzKwtuYauY-dKbKqYk8O/view?usp=sharing"),
-            new DownloadLink("MEGA", "https://mega.nz/file/TTJ3gY6a#ey3cNBCjbg-7kpZSCgLeAH5sqGG87QWY0ievOwfcKPs")
+            new DownloadLink("Google Drive", "https://drive.google.com/file/d/1bicIK4T-dBxE4alniY0nCbceiGkWvFoZ/view?usp=sharing"),
+            new DownloadLink("MEGA", "https://mega.nz/file/ae4mwDCY#LMaK_cwFu2qQnW1exolw1s0Lb2Y7bCDnWfINCMR5beA")
         ],
         "vs_cyrix"
     ),
@@ -68,8 +70,8 @@ _FNF_MODS = [
         [
             new DownloadLink("GameBanana", "https://gamebanana.com/mods/249504"),
             new DownloadLink("GitHub Source", "https://github.com/AyeTSG/Funkin_VsKiryu"),
-            new DownloadLink("Google Drive", "https://drive.google.com/file/d/1U6KBiU_8FnIz2RpK2HF9NoGckYBTMu-X/view?usp=sharing"),
-            new DownloadLink("MEGA", "https://mega.nz/file/SHpyEIZZ#tXWlQisqIBCnkENJcATKuyNAvjBeTL4R6LHIsHDEBf4")
+            new DownloadLink("Google Drive", "https://drive.google.com/file/d/18VjkGq61iVMcbOwcG1ahs65CuS7iPgBU/view?usp=sharing"),
+            new DownloadLink("MEGA", "https://mega.nz/file/SapA3JhC#7u21pAEehi-v1wENqMHAiUAR9P-33z69HysCpByhvfo")
         ],
         "vs_kiryu"
     )
