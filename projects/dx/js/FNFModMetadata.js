@@ -17,19 +17,6 @@ class FNFMod {
 }
 
 _FNF_MODS = [
-    // Cinopack
-    new FNFMod(
-        "Friday Night Funkin': Cinopack",
-        "Cinopack is a custom modpack that overhauls and adds new songs and characters to the base game.",
-        "March 6th, 2021",
-        "https://ayetsg.github.io/projects/dx/img/mods/cinopack/thumbnail.jpg",
-        [
-            new DownloadLink("GameBanana", "https://gamebanana.com/mods/42833"),
-            new DownloadLink("GitHub Source", "https://github.com/AyeTSG/Funkin_Cinopack_ST")
-        ],
-        "cinopack"
-    ),
-
     // Small Things
     new FNFMod(
         "Friday Night Funkin': Small Things",

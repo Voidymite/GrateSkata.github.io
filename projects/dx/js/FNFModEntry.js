@@ -7,7 +7,6 @@ class FNFMod {
 }
 
 _FNF_MODS = [
-    new FNFMod("FNF Cinopack", "https://ayetsg.github.io/projects/dx/img/mods/cinopack/thumbnail.jpg", "https://ayetsg.github.io/projects/dx/work/cinopack.html"),
     new FNFMod("FNF Small Things", "https://ayetsg.github.io/projects/dx/img/mods/st/thumbnail.png", "https://ayetsg.github.io/projects/dx/work/small_things.html"),
     new FNFMod("???", "https://ayetsg.github.io/projects/dx/img/mods/tbd.png", "#"),
     new FNFMod("FNF VS Cyrix", "https://ayetsg.github.io/projects/dx/img/mods/cyrix/thumbnail.png", "https://ayetsg.github.io/projects/dx/work/vs_cyrix.html"),
