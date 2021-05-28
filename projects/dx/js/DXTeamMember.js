@@ -49,10 +49,10 @@ _TEAM_MEMBERS = [
         ]
     ),
 
-    // Celeste
+    // CelShader
     new DXTeamMember(
-        "Celeste",
-        "Musician",
+        "CelShader",
+        "Public Relations",
         [
             new TwitterLink("https://twitter.com/PansexualPlanet"),
             new YoutubeLink("https://youtube.com/channel/UCm3eGs2etEOMzRX0iQ4QzqQ")
