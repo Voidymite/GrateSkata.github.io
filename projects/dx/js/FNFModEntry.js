@@ -8,11 +8,8 @@ class FNFMod {
 
 _FNF_MODS = [
     new FNFMod("FNF Small Things", "https://ayetsg.github.io/projects/dx/img/mods/st/thumbnail.png", "https://ayetsg.github.io/projects/dx/work/small_things.html"),
-    new FNFMod("???", "https://ayetsg.github.io/projects/dx/img/mods/tbd.png", "#"),
     new FNFMod("FNF VS Cyrix", "https://ayetsg.github.io/projects/dx/img/mods/cyrix/thumbnail.png", "https://ayetsg.github.io/projects/dx/work/vs_cyrix.html"),
-    new FNFMod("FNF VS Kiryu", "https://ayetsg.github.io/projects/dx/img/mods/kiryu/thumbnail.jpg", "https://ayetsg.github.io/projects/dx/work/vs_kiryu.html"),
-    new FNFMod("???", "https://ayetsg.github.io/projects/dx/img/mods/tbd.png", "#"),
-    new FNFMod("???", "https://ayetsg.github.io/projects/dx/img/mods/tbd_blue.png", "#")
+    new FNFMod("FNF VS Kiryu", "https://ayetsg.github.io/projects/dx/img/mods/kiryu/thumbnail.jpg", "https://ayetsg.github.io/projects/dx/work/vs_kiryu.html")
 ]
 
 function addModsToDocument() {
