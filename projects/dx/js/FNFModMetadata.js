@@ -56,7 +56,7 @@ _FNF_MODS = [
         "https://ayetsg.github.io/projects/dx/img/mods/kiryu/thumbnail.jpg",
         [
             new DownloadLink("GameBanana", "https://gamebanana.com/mods/249504"),
-            new DownloadLink("GitHub Source", "https://github.com/AyeTSG/Funkin_VsKiryu"),
+            new DownloadLink("GitHub Source", "https://github.com/AyeTSG/Funkin_VsKiryu_Public"),
             new DownloadLink("Google Drive", "https://drive.google.com/file/d/1ds_HRzU9cFqLRrEoZX01StqfwJ222EFi/view?usp=sharing"),
             new DownloadLink("MEGA", "https://mega.nz/file/6awynS7T#VG4u5P6RZ69q2BNksrpNrdEBm26dZG4t4Ho9xQCelpI")
         ],
