@@ -54,7 +54,7 @@ _TEAM_MEMBERS = [
         "CelShader",
         "Public Relations",
         [
-            new TwitterLink("https://twitter.com/PansexualPlanet"),
+            new TwitterLink("https://twitter.com/CelShayter"),
             new YoutubeLink("https://youtube.com/channel/UCm3eGs2etEOMzRX0iQ4QzqQ")
         ]
     ),
