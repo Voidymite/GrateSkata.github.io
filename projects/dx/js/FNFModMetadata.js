@@ -27,8 +27,8 @@ _FNF_MODS = [
             new DownloadLink("GameBanana", "https://gamebanana.com/gamefiles/19575"),
             new DownloadLink("GitHub", "https://github.com/AyeTSG/Funkin_SmallThings/releases"),
             new DownloadLink("GitHub Source", "https://github.com/AyeTSG/Funkin_SmallThings"),
-            new DownloadLink("Google Drive", "https://drive.google.com/file/d/137qwpWa1vl1KejWd7Hc9sjbXu_TJ0UnG/view?usp=sharing"),
-            new DownloadLink("MEGA", "https://mega.nz/file/nC40naQQ#pRdFCdRp7iG9fgiqhcS6I8YDnojL163pvjJkvh9RMjc")
+            new DownloadLink("Google Drive", "https://drive.google.com/file/d/1Pl9i_1nz-C-WNezLaEF8Hb_PFIxnTRVN/view?usp=sharing"),
+            new DownloadLink("MEGA", "https://mega.nz/file/PbxyjBBZ#2rNMs950sKXq8f4J3_B938p2vfrf2PVP83TtVCYrTkA")
         ],
         "small_things"
     ),
