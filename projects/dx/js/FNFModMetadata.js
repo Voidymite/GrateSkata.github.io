@@ -41,9 +41,9 @@ _FNF_MODS = [
         "https://ayetsg.github.io/projects/dx/img/mods/cyrix/thumbnail.png",
         [
             new DownloadLink("GameBanana", "https://gamebanana.com/mods/287411"),
-            new DownloadLink("GitHub Source", "https://github.com/AyeTSG/Funkin_VsCyrix"),
-            new DownloadLink("Google Drive", "https://drive.google.com/file/d/1RyyMc6AEc-FBCWLMPbJlXFQ1Scz6e0SL/view?usp=sharing"),
-            new DownloadLink("MEGA", "https://mega.nz/file/vPBBnA7Q#UyK1h-Eg79rsFL0eSyfFW3YZf3Ci6w1h-_tlWHvZXG4")
+            new DownloadLink("GitHub Source", "https://github.com/AyeTSG/Funkin_VsCyrix_Kade_Public"),
+            new DownloadLink("Google Drive", "https://drive.google.com/file/d/1NNnofTOF4aQ_zOjN0x7VgDpJvFjXTrBs/view?usp=sharing"),
+            new DownloadLink("MEGA", "https://mega.nz/file/zShVjQ5Z#X-Yjji7BlxycKgx6Qyr-s9jzr_h7-01CbDaCPuyu-34")
         ],
         "vs_cyrix"
     ),
