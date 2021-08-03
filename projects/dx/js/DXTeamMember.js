@@ -84,16 +84,6 @@ _TEAM_MEMBERS = [
         []
     ),
 
-    // Kallionic
-    new DXTeamMember(
-        "Kallionic",
-        "Musician",
-        [
-            new TwitterLink("https://twitter.com/RisingRyota"),
-            new YoutubeLink("https://youtube.com/c/Kallionic")
-        ]
-    ),
-
     // Kazolzen
     new DXTeamMember(
         "Kazolzen",
