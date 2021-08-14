@@ -1,3 +1,7 @@
+.list_name {
+    text-align: center;
+}
+
 .project_list {
     margin: 0 auto;
     text-align: center;
@@ -33,8 +37,15 @@
     display: block;
     font-size: 20px;
     margin: 0 0 3px 0;
-    padding-bottom: 2px;
-    white-space: nowrap;
-    overflow: auto;
-    text-overflow: ellipsis;
+    padding-bottom: 4px;
+}
+
+.project_desc {
+    font-weight: 400;
+    font-size: medium;
+    font-style: italic;
+}
+
+.project_fnf_kiryu_desc {
+    font-size: small;
 }
