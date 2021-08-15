@@ -6,17 +6,19 @@ class List {
 }
 
 class Tile {
-    constructor(name, role, thumbnail_url, page_url, id, list_id) {
+    constructor(name, role, thumbnail_url, page_url, id, list_id, uses_link) {
         this.name = name;
         this.role = role;
         this.thumbnail_url = thumbnail_url;
         this.page_url = page_url;
         this.id = id;
         this.list_id = list_id;
+        this.uses_link = uses_link;
     }
 }
 
 _LISTS = [
+    new List("Unreleased", "list_unreleased"),
     new List("July 2021", "list_2021_july"),
     new List("June 2021", "list_2021_june"),
     new List("May 2021", "list_2021_may"),
@@ -24,20 +26,25 @@ _LISTS = [
 ]
 
 _PROJECTS = [
+    // Unreleased
+    new Tile("Monday Dusk Monolith", "Programming", "https://ayetsg.github.io/img/projects/fnf_mdm.png", null, "fnf_mdm", "list_unreleased", false),
+    new Tile("Friday Night Funkin': VS Akira", "Programming", "https://ayetsg.github.io/img/projects/fnf_akira.png", null, "fnf_akira", "list_unreleased", false),
+    new Tile("Friday Night Funkin': VS RetroSpecter", "Programming", "https://ayetsg.github.io/img/projects/fnf_retrospecter.png", null, "fnf_retrospecter", "list_unreleased", false),
+
     // July 2021
-    new Tile("Friday Night Funkin': Bob's Onslaught", "Programming", "https://ayetsg.github.io/img/projects/fnf_bob.png", "https://gamebanana.com/mods/285296", "fnf_bob", "list_2021_july"),
-    new Tile("Friday Night Funkin': VS Scott The Woz", "Dialogue Programming", "https://ayetsg.github.io/img/projects/fnf_scott.png", "https://gamebanana.com/mods/305075", "fnf_scott", "list_2021_july"),
+    new Tile("Friday Night Funkin': Bob's Onslaught", "Programming", "https://ayetsg.github.io/img/projects/fnf_bob.png", "https://gamebanana.com/mods/285296", "fnf_bob", "list_2021_july", true),
+    new Tile("Friday Night Funkin': VS Scott The Woz", "Dialogue Programming", "https://ayetsg.github.io/img/projects/fnf_scott.png", "https://gamebanana.com/mods/305075", "fnf_scott", "list_2021_july", true),
 
     // June 2021
-    new Tile("The Pentazone 2", "Playtesting", "https://ayetsg.github.io/img/projects/rblx_pz.png", "https://www.roblox.com/games/6623364739/The-Pentazone-2", "rblx_pz2", "list_2021_june"),
+    new Tile("The Pentazone 2", "Playtesting", "https://ayetsg.github.io/img/projects/rblx_pz.png", "https://www.roblox.com/games/6623364739/The-Pentazone-2", "rblx_pz2", "list_2021_june", true),
 
     // May 2021,
-    new Tile("Friday Night Funkin' Minus", "OST Video Production", "https://ayetsg.github.io/dx/img/mods/st/thumbnail.png", "https://gamebanana.com/mods/186942", "fnf_minus", "list_2021_may"),
-    new Tile("Friday Night Funkin': VS Cyrix", "Programming", "https://ayetsg.github.io/dx/img/mods/cyrix/thumbnail.png", "https://ayetsg.github.io/dx/work/vs_cyrix", "fnf_cyrix", "list_2021_may"),
-    new Tile("Friday Night Funkin': VS Kiryu", "Voice Acting / Programming", "https://ayetsg.github.io/dx/img/mods/kiryu/thumbnail.jpg", "https://ayetsg.github.io/dx/work/vs_kiryu", "fnf_kiryu", "list_2021_may"),
+    new Tile("Friday Night Funkin' Minus", "OST Video Production", "https://ayetsg.github.io/dx/img/projects/fnf_minus.png", "https://gamebanana.com/mods/186942", "fnf_minus", "list_2021_may", true),
+    new Tile("Friday Night Funkin': VS Cyrix", "Programming", "https://ayetsg.github.io/dx/img/mods/cyrix/thumbnail.png", "https://ayetsg.github.io/dx/work/vs_cyrix", "fnf_cyrix", "list_2021_may", true),
+    new Tile("Friday Night Funkin': VS Kiryu", "Voice Acting / Programming", "https://ayetsg.github.io/dx/img/mods/kiryu/thumbnail.jpg", "https://ayetsg.github.io/dx/work/vs_kiryu", "fnf_kiryu", "list_2021_may", true),
 
     // July 2020
-    new Tile("The Pentazone", "Voice Acting", "https://ayetsg.github.io/img/projects/rblx_pz.png", "https://www.roblox.com/games/5148416987/PENTAZONE-2-OUT-NOW-The-Pentazone", "rblx_pz", "list_2020_july")
+    new Tile("The Pentazone", "Voice Acting", "https://ayetsg.github.io/img/projects/rblx_pz.png", "https://www.roblox.com/games/5148416987/PENTAZONE-2-OUT-NOW-The-Pentazone", "rblx_pz", "list_2020_july", true)
 ]
 
 function getListEntry(list_id) {
@@ -52,13 +59,23 @@ function addProjectsToDocument() {
         var list_image = document.createElement('a');
         var list_details = document.createElement('div');
         var list_title_holder = document.createElement('h3');
-        var list_title_url = document.createElement('a');
+
+        if (item.uses_link == true) {
+            var list_title_url = document.createElement('a');
+        } else {
+            var list_title_url = document.createElement('span');
+        }
+
         var list_description = document.createElement('span');
         var list_sep = document.createElement('br');
 
         // set properties
-        list_image.href = item.page_url;
-        list_title_url.href = item.page_url;
+
+        if (item.uses_link == true) {
+            list_image.href = item.page_url;
+            list_title_url.href = item.page_url;
+        }
+
         list_title_url.innerText = item.name;
         list_description.innerText = item.role;
         list_image.style = "background-image: url('" + item.thumbnail_url + "');";
