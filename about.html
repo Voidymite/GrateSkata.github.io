@@ -13,88 +13,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
 
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
-        <script src="js/easter_egg_handler.js"></script>
-
-        <!-- Egg list script -->
-        <script>
-            function initList() {
-                var anyEggsFound = false;
-
-                // loop over all localstorage items
-                for (item in localStorage) {
-                    if (item.toString().startsWith("egg_")) {
-                        // check if egg is valid
-                        try {
-                            function_easter_eggs.filter(obj => {return obj.friendlyPattern === item})[0].friendlyPattern;
-                        } catch {
-                            console.log("EggList: Found INVALID egg: " + item);
-                            localStorage.removeItem(item);
-
-                            continue;
-                        }
-
-                        // we found a discovered egg!
-                        anyEggsFound = true;
-                        friendlyEggName = item.replace("egg_", "");
-                        console.log("EggList: Found " + friendlyEggName);
-
-                        // append it to the list
-                        var egg_list_item = document.createElement("li");
-                        var egg_list_text = document.createElement("span");
-                        var egg_list_description_text = document.createElement("span");
-                        egg_list_text.innerText = friendlyEggName;
-                        egg_list_description_text.innerText = ": " + function_easter_eggs.filter(obj => {return obj.friendlyPattern === item})[0].description;
-
-                        egg_list_text.classList.add("egg_name");
-                        egg_list_item.classList.add("egg_holder");
-
-                        egg_list_item.appendChild(egg_list_text);
-                        egg_list_item.appendChild(egg_list_description_text);
-                        document.getElementById("egg_list").appendChild(egg_list_item);
-                    }
-                }
-
-                // if we didnt find any eggs
-                if (anyEggsFound == false) {
-                    var text_noEggsFound = document.createElement("li");
-                    text_noEggsFound.innerHTML = "<i>None yet! Try hunting for some! Have a free one! </i><span class='egg_name'>monster</span>";
-
-                    document.getElementById("egg_list").appendChild(text_noEggsFound);
-                }
-
-                // after all of this, do sorting bullshit
-                var list, i, switching, b, shouldSwitch;
-                list = document.getElementById("egg_list");
-                switching = true;
-
-                while (switching) {
-                    switching = false;
-                    b = list.getElementsByTagName("li");
-                    for (i = 0; i < (b.length - 1); i++) {
-                        shouldSwitch = false;
-                        if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLocaleLowerCase()) {
-                            shouldSwitch = true;
-                            break;
-                        }
-                    }
-                    if (shouldSwitch) {
-                        b[i].parentNode.insertBefore(b[i + 1], b[i]);
-                        switching = true;
-                    }
-                }
-            }
-            
-            function clearList() {
-                document.getElementById("egg_list").innerHTML = "";
-            }
-
-            window.addEventListener("load", function() {
-                // init list
-                initList();
-            });
-        </script>
-
         <link rel="stylesheet" href="css/index.css">
 
         <meta property="og:title" content="AyeTSG" />
@@ -134,15 +52,8 @@
             <p>Open source projects that help power this website</p>
             <ul>
                 <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
-                <li><a href="http://thatmikeflynn.com/egg.js/">Egg.js</a></li>
                 <li><a href="https://jquery.com/">jQuery</a></li>
                 <li><a href="https://popper.js.org/">Popper</a></li>
-            </ul>
-            <!-- TODO: Isolate this to a separate page at some point -->
-            <h1>Discovered Easter Eggs</h1>
-            <p>Easter eggs that you've discovered on the site! Easter eggs on this site are a series of keystrokes, for example, if you type "test", and it is a valid easter egg, it will show up here!</p>
-            <ul id="egg_list">
-
             </ul>
         </div>
     </body>
