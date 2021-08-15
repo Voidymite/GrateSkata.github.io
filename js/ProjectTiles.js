@@ -28,11 +28,14 @@ _LISTS = [
 _PROJECTS = [
     // Unreleased
     new Tile("Monday Dusk Monolith", "Programming", "https://ayetsg.github.io/img/projects/fnf_mdm.png", null, "fnf_mdm", "list_unreleased", false),
+    new Tile("Friday Night Funkin' B3 Remixed", "Programming", "https://ayetsg.github.io/img/projects/fnf_b3.png", null, "fnf_b3", "list_unreleased", false),
     new Tile("Friday Night Funkin': VS Akira", "Programming", "https://ayetsg.github.io/img/projects/fnf_akira.png", null, "fnf_akira", "list_unreleased", false),
     new Tile("Friday Night Funkin': VS RetroSpecter", "Programming", "https://ayetsg.github.io/img/projects/fnf_retrospecter.png", null, "fnf_retrospecter", "list_unreleased", false),
+    new Tile("Subway\nSax Battle", "Programming", "https://ayetsg.github.io/img/projects/fnf_saxbattle.png", null, "fnf_saxbattle", "list_unreleased", false),
 
     // July 2021
     new Tile("Friday Night Funkin': Bob's Onslaught", "Programming", "https://ayetsg.github.io/img/projects/fnf_bob.png", "https://gamebanana.com/mods/285296", "fnf_bob", "list_2021_july", true),
+    new Tile("Friday Night Funkin': VS Ace", "Programming", "https://ayetsg.github.io/img/projects/fnf_ace.png", "https://gamebanana.com/mods/311759", "fnf_ace", "list_2021_july", true),
     new Tile("Friday Night Funkin': VS Scott The Woz", "Dialogue Programming", "https://ayetsg.github.io/img/projects/fnf_scott.png", "https://gamebanana.com/mods/305075", "fnf_scott", "list_2021_july", true),
 
     // June 2021

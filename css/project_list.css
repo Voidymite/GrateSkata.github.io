@@ -44,8 +44,9 @@
     font-weight: 400;
     font-size: medium;
     font-style: italic;
+    display: inline-block;
 }
 
 .project_fnf_kiryu_desc {
-    font-size: small;
+    font-size: 15px;
 }
