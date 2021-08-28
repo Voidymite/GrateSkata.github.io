@@ -23,7 +23,6 @@ _LISTS = [
     new List("July 2021", "list_2021_july"),
     new List("June 2021", "list_2021_june"),
     new List("May 2021", "list_2021_may"),
-    new List("March 2021", "list_2021_march"),
     new List("July 2020", "list_2020_july")
 ]
 
@@ -49,11 +48,6 @@ _PROJECTS = [
 
     // May 2021,
     new Tile("Friday Night Funkin' Minus", "OST Video Production", "https://ayetsg.github.io/img/projects/fnf_minus.png", "https://gamebanana.com/mods/186942", "fnf_minus", "list_2021_may", true),
-    new Tile("Friday Night Funkin': VS Cyrix", "Programming", "https://ayetsg.github.io/dx/img/mods/cyrix/thumbnail.png", "https://ayetsg.github.io/dx/work/vs_cyrix", "fnf_cyrix", "list_2021_may", true),
-    new Tile("Friday Night Funkin': VS Kiryu", "Voice Acting / Programming", "https://ayetsg.github.io/dx/img/mods/kiryu/thumbnail.jpg", "https://ayetsg.github.io/dx/work/vs_kiryu", "fnf_kiryu", "list_2021_may", true),
-
-    // March 2021
-    new Tile("Friday Night Funkin': Small Things", "Programming", "https://ayetsg.github.io/dx/img/mods/st/thumbnail.png", "https://ayetsg.github.io/dx/work/small_things", "fnf_st", "list_2021_march", true),
 
     // July 2020
     new Tile("The Pentazone", "Voice Acting", "https://ayetsg.github.io/img/projects/rblx_pz.png", "https://www.roblox.com/games/5148416987/PENTAZONE-2-OUT-NOW-The-Pentazone", "rblx_pz", "list_2020_july", true)
