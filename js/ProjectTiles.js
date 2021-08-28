@@ -34,7 +34,6 @@ _PROJECTS = [
     new Tile("Friday Night Funkin': Everday Ensemble", "Programming", "https://ayetsg.github.io/img/projects/fnf_ee.png", null, "fnf_ee", "list_unreleased", false),
     new Tile("Friday Night Funkin': Subway Sax Battle", "Programming", "https://ayetsg.github.io/img/projects/fnf_saxbattle.png", null, "fnf_saxbattle", "list_unreleased", false),
     new Tile("Friday Night Funkin': Un-Gravitify", "Programming", "https://ayetsg.github.io/img/projects/fnf_ug.png", null, "fnf_ug", "list_unreleased", false),
-    new Tile("Friday Night Funkin': VS Akira", "Programming", "https://ayetsg.github.io/img/projects/fnf_akira.png", null, "fnf_akira", "list_unreleased", false),
     new Tile("Friday Night Funkin': VS RetroSpecter", "Programming", "https://ayetsg.github.io/img/projects/fnf_retrospecter.png", null, "fnf_retrospecter", "list_unreleased", false),
 
     // August 2021
