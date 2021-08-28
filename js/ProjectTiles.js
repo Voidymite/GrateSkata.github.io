@@ -33,10 +33,10 @@ _PROJECTS = [
     new Tile("Friday Night Funkin': Everday Ensemble", "Programming", "https://ayetsg.github.io/img/projects/fnf_ee.png", null, "fnf_ee", "list_unreleased", false),
     new Tile("Friday Night Funkin': Subway Sax Battle", "Programming", "https://ayetsg.github.io/img/projects/fnf_saxbattle.png", null, "fnf_saxbattle", "list_unreleased", false),
     new Tile("Friday Night Funkin': Un-Gravitify", "Programming", "https://ayetsg.github.io/img/projects/fnf_ug.png", null, "fnf_ug", "list_unreleased", false),
-    new Tile("Friday Night Funkin': VS RetroSpecter", "Programming", "https://ayetsg.github.io/img/projects/fnf_retrospecter.png", null, "fnf_retrospecter", "list_unreleased", false),
 
     // August 2021
     new Tile("Friday Night Funkin': MEMEVERSE", "Engine Programming", "https://ayetsg.github.io/img/projects/fnf_memeverse.png", "https://gamebanana.com/mods/313677", "fnf_memeverse", "list_2021_august", true),
+    new Tile("Friday Night Funkin': VS RetroSpecter", "Programming", "https://ayetsg.github.io/img/projects/fnf_retrospecter.png", "https://gamebanana.com/mods/317366", "fnf_retrospecter", "list_2021_august", true),
 
     // July 2021
     new Tile("Friday Night Funkin': Bob's Onslaught", "Programming", "https://ayetsg.github.io/img/projects/fnf_bob.png", "https://gamebanana.com/mods/285296", "fnf_bob", "list_2021_july", true),
