@@ -1,8 +1,8 @@
-{
+var messages = {
     "entry_number_seventeen": [
         "ENTRY NUMBER SEVENTEEN",
         "DARK DARKER YET DARKER",
-        "THE DARKESS KEEPS GROWING",
+        "THE DARKNESS KEEPS GROWING",
         "THE SHADOWS CUTTING DEEPER",
         "PHOTON READINGS NEGATIVE",
         "THIS NEXT EXPERIMENT",
@@ -11,6 +11,6 @@
         "VERY",
         "INTERESTING",
         "...",
-        "WHAT DO YOU TWO THINK"
+        "WHAT DO YOU TWO THINK?"
     ]
 }
