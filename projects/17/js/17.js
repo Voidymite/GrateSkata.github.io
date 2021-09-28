@@ -119,3 +119,9 @@ function playWingDingSound() {
     // Play the sound
     sound.play();
 }
+
+// Purpose: Handle clicking on the window
+window.onclick = function() {
+    // Initialize
+    init_17_shit();
+}

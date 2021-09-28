@@ -7,7 +7,7 @@ body {
 }
 
 .gaster_dingbat {
-    width: 24px;
+    width: 28px;
     animation: shake 0.5s;
     animation-iteration-count: infinite;
 }
