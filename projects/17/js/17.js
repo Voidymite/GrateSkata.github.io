@@ -1,3 +1,5 @@
+var HAS_BEEN_INITIALIZED = false;
+
 var TYPE_SPEED = 150;   // Master type speed (ms)
 var WAIT_SPEED = 600;   // Master wait speed (ms)
 
@@ -123,5 +125,8 @@ function playWingDingSound() {
 // Purpose: Handle clicking on the window
 window.onclick = function() {
     // Initialize
-    init_17_shit();
+    if (HAS_BEEN_INITIALIZED == false) {
+        HAS_BEEN_INITIALIZED = true;
+        init_17_shit();
+    }
 }
