@@ -26,6 +26,8 @@ function retrieve_message(entry, index) {
 
 // Purpose: Types a character onto the page
 function typeCharacter(in_character) {
+
+    /*
     // Create a <span>
     span = document.createElement("span");
 
@@ -35,6 +37,18 @@ function typeCharacter(in_character) {
     // Add the span to the page
     span.classList.add("gaster_text_entry");
     document.getElementById("gaster_text").appendChild(span);
+    */
+
+    // Fix spaces
+    if (in_character == " ") {
+        in_character = "_";
+    }
+
+    // Create an image
+    img = document.createElement("img");
+    img.src = "./data/wingdings_font_images/" + in_character + ".png";
+    img.classList.add("gaster_dingbat");
+    document.getElementById("gaster_text").appendChild(img);
 
     // Plays a wingdings sound
     playWingDingSound();
@@ -72,7 +86,7 @@ async function typeEntry(in_entry) {
 function playSmileMusic() {
     // Create the sound
     sound = new Howl({
-        src: ['../audio/music/mus_smile.ogg'],
+        src: ['./audio/music/mus_smile.ogg'],
         volume: 0.7,
         loop: true
     });
@@ -88,7 +102,7 @@ function playWingDingSound() {
 
     // Create the sound
     sound = new Howl({
-        src: ['../audio/sounds/snd_wngdng' + random_number + '.wav'],
+        src: ['./audio/sounds/snd_wngdng' + random_number + '.wav'],
         volume: 1.0
     });
 
