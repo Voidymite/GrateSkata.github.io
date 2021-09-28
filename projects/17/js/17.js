@@ -41,7 +41,17 @@ function typeCharacter(in_character) {
 
     // Fix spaces
     if (in_character == " ") {
-        in_character = "_";
+        in_character = "space";
+    }
+
+    // Fix dots
+    if (in_character == ".") {
+        in_character = "dot";
+    }
+
+    // Fix question marks
+    if (in_character == "?") {
+        in_character = "question_mark";
     }
 
     // Create an image
