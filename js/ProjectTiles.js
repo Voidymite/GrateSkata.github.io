@@ -19,6 +19,7 @@ class Tile {
 
 _LISTS = [
     new List("Unreleased", "list_unreleased"),
+    new List("September 2021", "list_2021_september"),
     new List("August 2021", "list_2021_august"),
     new List("July 2021", "list_2021_july"),
     new List("June 2021", "list_2021_june"),
@@ -31,6 +32,9 @@ _PROJECTS = [
     new Tile("Monday Dusk Monolith", "Programming", "https://ayetsg.github.io/img/projects/fnf_mdm.png", null, "fnf_mdm", "list_unreleased", false),
     new Tile("Friday Night Funkin' B3 Remixed", "Programming", "https://ayetsg.github.io/img/projects/fnf_b3.png", null, "fnf_b3", "list_unreleased", false),
     new Tile("Friday Night Funkin': Subway Sax Battle", "Programming", "https://ayetsg.github.io/img/projects/fnf_saxbattle.png", null, "fnf_saxbattle", "list_unreleased", false),
+
+    // September 2021
+    new Tile("Webtry Seventeen", "Programming", "https://ayetsg.github.io/img/projects/web_17.png", "https://ayetsg.github.io/projects/17", "web_17", "list_2021_september", true),
 
     // August 2021
     new Tile("Friday Night Funkin': MEMEVERSE", "Engine Programming", "https://ayetsg.github.io/img/projects/fnf_memeverse.png", "https://gamebanana.com/mods/313677", "fnf_memeverse", "list_2021_august", true),
