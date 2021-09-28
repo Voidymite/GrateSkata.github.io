@@ -34,7 +34,7 @@ _PROJECTS = [
     new Tile("Friday Night Funkin': Subway Sax Battle", "Programming", "https://ayetsg.github.io/img/projects/fnf_saxbattle.png", null, "fnf_saxbattle", "list_unreleased", false),
 
     // September 2021
-    new Tile("Webtry Seventeen", "Programming", "https://ayetsg.github.io/img/projects/web_17.png", "https://ayetsg.github.io/projects/17", "web_17", "list_2021_september", true),
+    new Tile("Webtry Seventeen", "Programming", "https://ayetsg.github.io/img/projects/web_17.png", "https://ayetsg.github.io/projects/17/index.html", "web_17", "list_2021_september", true),
 
     // August 2021
     new Tile("Friday Night Funkin': MEMEVERSE", "Engine Programming", "https://ayetsg.github.io/img/projects/fnf_memeverse.png", "https://gamebanana.com/mods/313677", "fnf_memeverse", "list_2021_august", true),
