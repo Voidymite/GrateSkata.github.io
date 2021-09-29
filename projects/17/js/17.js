@@ -1,5 +1,8 @@
 var HAS_BEEN_INITIALIZED = false;
 var HAS_BEEN_PRECACHED = false;
+var HAS_CLICKED_MYSTERY_MAN = false;
+var _ALPHA_INTERVAL = null;
+var _ALPHA = 1.0;
 
 var TYPE_SPEED = 150;   // Master type speed (ms)
 var WAIT_SPEED = 600;   // Master wait speed (ms)
@@ -130,6 +133,45 @@ function unlockPrecacheLock() {
 
     // Change the notice text
     document.getElementById("notice").innerText = "click anywhere on the page to start because browser autoplay policies suck";
+}
+
+// Purpose: Handles clicking on the mystery man
+async function handleMysteryManClick() {
+    if (HAS_CLICKED_MYSTERY_MAN == false) {
+        HAS_CLICKED_MYSTERY_MAN = true;
+        
+        // Create and play the mystery go sound
+        sound = new Howl({
+            src: ['./audio/sounds/snd_mysterygo.ogg'],
+            volume: 1.0
+        });
+
+        sound.play();
+
+        // Set the new sprite to be the next frame
+        document.getElementById("mystery_man").src = "./images/spr_mysteryman/1.png";
+
+        // Lower his alpha
+        _ALPHA_INTERVAL = window.setInterval(lowerMysteryAlpha, 50);
+
+        // Sleep 3 seconds
+        await _sleep(3000);
+
+        // Destroy the mystery man shit
+        document.getElementById("mystery_man_holder").remove();
+        window.clearInterval(_ALPHA_INTERVAL);
+    }
+}
+
+// Purpose: Lowers the mystery man's alpha
+function lowerMysteryAlpha() {
+    document.getElementById("mystery_man").style.opacity = _ALPHA;
+    
+    if (_ALPHA > 0) {
+        _ALPHA -= 0.05;
+    } else {
+        _ALPHA = 0;
+    }
 }
 
 // Purpose: Handle clicking on the window
