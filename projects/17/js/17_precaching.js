@@ -1,5 +1,7 @@
 // Purpose: List of image assets to precache
 var _IMAGES_TO_PRECACHE = [
+    "spr_mysteryman/0.png",
+    "spr_mysteryman/1.png",
     "wingdings_font_images/A.png",
     "wingdings_font_images/B.png",
     "wingdings_font_images/C.png",
@@ -29,6 +31,7 @@ var _IMAGES_TO_PRECACHE = [
 // Purpose: List of sound assets to precache
 var _SOUNDS_TO_PRECACHE = [
     "music/mus_smile.ogg",
+    "sounds/snd_mysterygo.ogg",
     "sounds/snd_wngdng1.wav",
     "sounds/snd_wngdng2.wav",
     "sounds/snd_wngdng3.wav",
