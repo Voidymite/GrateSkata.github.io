@@ -131,6 +131,9 @@ function unlockPrecacheLock() {
     // Set the variable
     HAS_BEEN_PRECACHED = true;
 
+    // Destroy the temporary pre-caching image holder
+    document.getElementById("precache_image_holder").remove();
+
     // Change the notice text
     document.getElementById("notice").innerText = "click anywhere on the page to start because browser autoplay policies suck";
 }
