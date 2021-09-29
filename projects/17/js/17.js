@@ -1,4 +1,5 @@
 var HAS_BEEN_INITIALIZED = false;
+var HAS_BEEN_PRECACHED = false;
 
 var TYPE_SPEED = 150;   // Master type speed (ms)
 var WAIT_SPEED = 600;   // Master wait speed (ms)
@@ -58,7 +59,7 @@ function typeCharacter(in_character) {
 
     // Create an image
     img = document.createElement("img");
-    img.src = "./data/wingdings_font_images/" + in_character + ".png";
+    img.src = "./images/wingdings_font_images/" + in_character + ".png";
     img.classList.add("gaster_dingbat");
     document.getElementById("gaster_text").appendChild(img);
 
@@ -122,10 +123,19 @@ function playWingDingSound() {
     sound.play();
 }
 
+// Purpose: Tells the script the shit been precache
+function unlockPrecacheLock() {
+    // Set the variable
+    HAS_BEEN_PRECACHED = true;
+
+    // Change the notice text
+    document.getElementById("notice").innerText = "click anywhere on the page to start because browser autoplay policies suck";
+}
+
 // Purpose: Handle clicking on the window
 window.onclick = function() {
     // Initialize
-    if (HAS_BEEN_INITIALIZED == false) {
+    if (HAS_BEEN_INITIALIZED == false && HAS_BEEN_PRECACHED == true) {
         HAS_BEEN_INITIALIZED = true;
         init_17_shit();
     }

@@ -6,6 +6,10 @@ body {
     color: white;
 }
 
+#precache_image_holder {
+    visibility: hidden;
+}
+
 .gaster_dingbat {
     width: 28px;
     animation: shake 0.5s;
