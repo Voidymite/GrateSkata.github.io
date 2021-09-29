@@ -27,7 +27,7 @@ function init_17_shit() {
 // Purpose: Retrieves a message from messages.json
 function retrieve_message(entry, index) {
     // Return the sting
-    return messages[entry][index];
+    return messages[entry]["ordered_entries"][index];
 }
 
 // Purpose: Types a character onto the page
@@ -90,7 +90,7 @@ async function typePhrase(in_phrase) {
 // Purpose: Types a whole entry from messages.json
 async function typeEntry(in_entry) {
     // Loop over all messages
-    for (var i = 0; i < messages[in_entry].length; i++) {
+    for (var i = 0; i < messages[in_entry]["ordered_entries"].length; i++) {
         // Type the phrase
         await typePhrase(retrieve_message(in_entry, i));
 
