@@ -1,3 +1,7 @@
+// File: 17_precaching.js
+// Author: AyeTSG
+// Purpose: Preload assets for the entry number seventeen recreation
+
 // Purpose: List of image assets to precache
 var _IMAGES_TO_PRECACHE = [
     "spr_mysteryman/0.png",

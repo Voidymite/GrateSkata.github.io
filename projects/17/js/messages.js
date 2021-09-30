@@ -1,3 +1,7 @@
+// File: messages.js
+// Author: AyeTSG
+// Purpose: Provide message data for the entry number seventeen recreation
+
 var messages = {
     "entry_number_seventeen": {
         "speaker": "gaster",

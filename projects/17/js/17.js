@@ -1,3 +1,7 @@
+// File: 17.js
+// Author: AyeTSG
+// Purpose: Provide functionality to the entry number seventeen recreation
+
 var HAS_BEEN_INITIALIZED = false;
 var HAS_BEEN_PRECACHED = false;
 var HAS_CLICKED_MYSTERY_MAN = false;
