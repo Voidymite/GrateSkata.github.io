@@ -2,6 +2,8 @@
 // Author: AyeTSG
 // Purpose: Provide functionality to the entry number seventeen recreation
 
+// TODO: Implement the speaker system. I might want to use this undertale-style typer in the future.
+
 var HAS_BEEN_INITIALIZED = false;
 var HAS_BEEN_PRECACHED = false;
 var HAS_CLICKED_MYSTERY_MAN = false;

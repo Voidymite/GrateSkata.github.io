@@ -2,6 +2,8 @@
 // Author: AyeTSG
 // Purpose: Preload assets for the entry number seventeen recreation
 
+// TODO: Dynamically pre-cache required letters and characters based on message entries
+
 // Purpose: List of image assets to precache
 var _IMAGES_TO_PRECACHE = [
     "spr_mysteryman/0.png",
