@@ -2,6 +2,8 @@
 // Author: AyeTSG
 // Purpose: Provide message data for the entry number seventeen recreation
 
+// TODO: Implement localization?
+
 var messages = {
     "entry_number_seventeen": {
         "speaker": "gaster",
