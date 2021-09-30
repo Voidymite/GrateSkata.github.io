@@ -6,7 +6,7 @@ var speaker_configs = {
     // Gaster
     "gaster": {
         // What font should the speaker use?
-        "font": "wingdings_bitmapped_images",
+        "font": "wingdings_bitmapped_images",       // NOTE: Since this is a special font, this case should be manually handled over in 17.js
 
         // Should the speaker show their icon?
         "uses_speaker_icon": false,
@@ -23,6 +23,12 @@ var speaker_configs = {
             "sounds/snd_wngdng5.wav",
             "sounds/snd_wngdng6.wav",
             "sounds/snd_wngdng7.wav"
-        ]
+        ],
+
+        // How many MS should pass before typing another character?
+        "time_type": 150,
+
+        // How many MS should pass before typing another entry?
+        "time_wait": 600
     }
 }
