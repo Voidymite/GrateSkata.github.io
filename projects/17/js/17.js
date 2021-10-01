@@ -123,7 +123,7 @@ function playSmileMusic() {
 // Purpose: Plays one of the speaker's sounds
 function playSpeakSound(in_speaker) {
     // Get a random number between 1 and 7
-    random_number = (Math.floor(Math.random() * speaker_configs[in_speaker]["speak_sounds"].length)) + 1;
+    random_number = (Math.floor(Math.random() * speaker_configs[in_speaker]["speak_sounds"].length));
 
     // Create the sound
     sound = new Howl({
