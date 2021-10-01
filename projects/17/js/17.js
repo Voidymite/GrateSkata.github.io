@@ -37,7 +37,7 @@ function retrieve_message(entry, index) {
 }
 
 // Purpose: Types a character onto the page
-function typeCharacter(in_character) {
+function typeCharacter(in_character, in_speaker) {
 
     /*
     // Create a <span>
@@ -68,20 +68,20 @@ function typeCharacter(in_character) {
 
     // Create an image
     img = document.createElement("img");
-    img.src = "./images/wingdings_font_images/" + in_character + ".png";
+    img.src = "./images/" + speaker_configs[in_speaker]["font_data_folder"] + "/" + in_character + ".png";
     img.classList.add("gaster_dingbat");
     document.getElementById("gaster_text").appendChild(img);
 
-    // Plays a wingdings sound
-    playWingDingSound();
+    // Plays a speaker's sound
+    playSpeakSound(in_speaker);
 }
 
 // Purpose: Types a phrase onto the page
-async function typePhrase(in_phrase) {
+async function typePhrase(in_phrase, in_speaker) {
     // Loop over each character
     for (var i = 0; i < in_phrase.length; i++) {
         // Type the character
-        typeCharacter(in_phrase[i]);
+        typeCharacter(in_phrase[i], in_speaker);
 
         await _sleep(TYPE_SPEED);
     }
@@ -95,10 +95,13 @@ async function typePhrase(in_phrase) {
 
 // Purpose: Types a whole entry from messages.json
 async function typeEntry(in_entry) {
+    // Set the speaker config
+    setSpeakerConfigValues(messages[in_entry]["speaker"]);
+
     // Loop over all messages
     for (var i = 0; i < messages[in_entry]["ordered_entries"].length; i++) {
         // Type the phrase
-        await typePhrase(retrieve_message(in_entry, i));
+        await typePhrase(retrieve_message(in_entry, i), messages[in_entry]["speaker"]);
 
         await _sleep(WAIT_SPEED);
     }
@@ -117,14 +120,14 @@ function playSmileMusic() {
     sound.play();
 }
 
-// Purpose: Plays 1 of 7 random sounds
-function playWingDingSound() {
+// Purpose: Plays one of the speaker's sounds
+function playSpeakSound(in_speaker) {
     // Get a random number between 1 and 7
-    random_number = (Math.floor(Math.random() * 7)) + 1;
+    random_number = (Math.floor(Math.random() * speaker_configs[in_speaker]["speak_sounds"].length));
 
     // Create the sound
     sound = new Howl({
-        src: ['./audio/sounds/snd_wngdng' + random_number + '.wav'],
+        src: ['./audio/' + speaker_configs[in_speaker]["speak_sounds"][random_number]],
         volume: 1.0
     });
 
@@ -181,6 +184,13 @@ function lowerMysteryAlpha() {
     } else {
         _ALPHA = 0;
     }
+}
+
+// Purpose: Set the variables to use the stuff per-entry
+function setSpeakerConfigValues(in_speaker) {
+    // Set the typing times
+    TYPE_SPEED = speaker_configs[in_speaker]["time_type"];
+    WAIT_SPEED = speaker_configs[in_speaker]["time_wait"];
 }
 
 // Purpose: Handle clicking on the window
