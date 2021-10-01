@@ -6,7 +6,7 @@ var speaker_configs = {
     // Gaster
     "gaster": {
         // What font should the speaker use?
-        "font": "wingdings_bitmapped_images",       // NOTE: Since this is a special font, this case should be manually handled over in 17.js
+        "font_data_folder": "wingdings_font_images",
 
         // Should the speaker show their icon?
         "uses_speaker_icon": false,
