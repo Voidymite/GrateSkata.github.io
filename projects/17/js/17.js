@@ -69,7 +69,12 @@ function typeCharacter(in_character, in_speaker) {
     // Create an image
     img = document.createElement("img");
     img.src = "./images/" + speaker_configs[in_speaker]["font_data_folder"] + "/" + in_character + ".png";
-    img.classList.add("gaster_dingbat");
+    
+    // Add appropriate classes
+    img.classList.add("image_type_character");
+    img.classList.add("speaker_" + in_speaker);
+    img.classList.add("character_" + in_character);
+
     document.getElementById("gaster_text").appendChild(img);
 
     // Plays a speaker's sound
