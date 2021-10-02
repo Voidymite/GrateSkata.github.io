@@ -16,10 +16,22 @@ var _SOUNDS_TO_PRECACHE = [
     "sounds/snd_mysterygo.ogg"
 ]
 
+// Purpose: Holds a list of all assets that have been precached
+var _PRECACHED_ASSETS = [];
+
+// Purpose: Holds a list of found character sets to precache
 var _CHARACTER_LIST = [];
 
 // Purpose: Precaches a sound
 async function precacheSound(in_sound_path) {
+    // Check if the asset is already precached
+    var SHOULD_SKIP_PRECACHE = checkIfPrecached(in_sound_path, "sound");
+
+    // Skip the precache if applicable
+    if (SHOULD_SKIP_PRECACHE) {
+        return;
+    }
+
     console.log("[PreCache] " + in_sound_path);
 
     // Create the sound
@@ -28,11 +40,22 @@ async function precacheSound(in_sound_path) {
         volume: 1.0
     });
 
+    // Add the asset path to pre-cached assets
+    _PRECACHED_ASSETS.push("audio/" + in_sound_path);
+
     return;
 }
 
 // Purpose: Precaches an image
 async function precacheImage(in_image_path) {
+    // Check if the asset is already precached
+    var SHOULD_SKIP_PRECACHE = checkIfPrecached(in_image_path, "image");
+
+    // Skip the precache if applicable
+    if (SHOULD_SKIP_PRECACHE) {
+        return;
+    }
+
     console.log("[PreCache] " + in_image_path); 
 
     // Create an image
@@ -41,7 +64,21 @@ async function precacheImage(in_image_path) {
     img.classList.add("precached_image");
     document.getElementById("precache_image_holder").appendChild(img);
 
+    // Add the asset path to pre-cached assets
+    _PRECACHED_ASSETS.push("images/" + in_image_path);
+
     return;
+}
+
+// Purpose: Check if an asset is precached
+function checkIfPrecached(in_asset_path, in_asset_type) {
+    if (in_asset_type == "sound") {
+        return _PRECACHED_ASSETS.includes("audio/" + in_asset_path);
+    } else if (in_asset_type == "image") {
+        return _PRECACHED_ASSETS.includes("images/" + in_asset_path);
+    } else {
+        throw "Unknown asset type '" + in_asset_type + "'";
+    }
 }
 
 // Purpose: Filter characters
@@ -74,13 +111,18 @@ document.addEventListener('DOMContentLoaded', async function() {
         current_entry = Object.keys(messages).at(i);
         current_speaker = messages[current_entry]["speaker"];
 
+        // Precache the speaker's speaking sounds
+        for (var j = 0; j < speaker_configs[current_speaker]["speak_sounds"].length; j++) {
+            precacheSound(speaker_configs[current_speaker]["speak_sounds"][j]);
+        }
+
         // Loop over all of the subentries
-        for (var j = 0; j < messages[current_entry]["ordered_entries"].length; j++) {
-            current_subentry = messages[current_entry]["ordered_entries"][j];
+        for (var k = 0; k < messages[current_entry]["ordered_entries"].length; k++) {
+            current_subentry = messages[current_entry]["ordered_entries"][k];
 
             // Loop over each letter
-            for (var k = 0; k < current_subentry.length; k++) {
-                current_character = filterCharacter(current_subentry[k]);
+            for (var l = 0; l < current_subentry.length; l++) {
+                current_character = filterCharacter(current_subentry[l]);
 
                 if (!_CHARACTER_LIST[current_speaker + "__" + current_character]) {
                     _CHARACTER_LIST[current_speaker + "__" + current_character] = 0;
