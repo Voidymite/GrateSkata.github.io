@@ -20,6 +20,8 @@ var _CHARACTER_LIST = [];
 
 // Purpose: Precaches a sound
 async function precacheSound(in_sound_path) {
+    console.log("[PreCache] " + in_sound_path);
+
     // Create the sound
     sound = new Howl({
         src: ['./audio/' + in_sound_path],
@@ -31,6 +33,8 @@ async function precacheSound(in_sound_path) {
 
 // Purpose: Precaches an image
 async function precacheImage(in_image_path) {
+    console.log("[PreCache] " + in_image_path); 
+
     // Create an image
     img = document.createElement("img");
     img.src = "./images/" + in_image_path;
@@ -88,10 +92,16 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     }
 
-    // TODO: Loop through all character list entries
-    // TODO: Split those entries by speaker name and character
-    // TODO: Load the character images based on the speaker config data
+    // Loop through all the character list entries
+    for (var i = 0; i < Object.keys(_CHARACTER_LIST).length; i++) {
+        // Split the data by speaker name and character
+        current_character = Object.keys(_CHARACTER_LIST).at(i);
+        current_speaker = current_character.split("__");
+
+        // Precache the image
+        precacheImage(speaker_configs[current_speaker[0]]["font_data_folder"] + "/" + current_speaker[1] + ".png");
+    }
 
     // Unlock the precache lock
-    //unlockPrecacheLock();
+    unlockPrecacheLock();
 });
