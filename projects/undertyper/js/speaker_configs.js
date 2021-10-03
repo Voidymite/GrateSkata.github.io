@@ -7,22 +7,16 @@
    the speaker_configs.js used in the 17 project. */
 
 var speaker_configs = {
-    "gaster": {
-        "font_data_folder": "wingdings_font_images",
-        "uses_speaker_icon": false,
+    "sans": {
+        "font_data_folder": "comic_sans",
+        "uses_speaker_icon": true,
         "speak_icons": {
-            "normal": null
+            "normal": "images/icons/sans/normal.png"
         },
-        "speak_name": "W.D. Gaster",
+        "speak_name": "Sans",
         "speak_sounds": [
-            "audio/sounds/speak/gaster/snd_wngdng1.wav",
-            "audio/sounds/speak/gaster/snd_wngdng2.wav",
-            "audio/sounds/speak/gaster/snd_wngdng3.wav",
-            "audio/sounds/speak/gaster/snd_wngdng4.wav",
-            "audio/sounds/speak/gaster/snd_wngdng5.wav",
-            "audio/sounds/speak/gaster/snd_wngdng6.wav",
-            "audio/sounds/speak/gaster/snd_wngdng7.wav"
+            "audio/sounds/speak/sans/snd_txtsans.wav",
         ],
-        "time_type": 150
+        "time_type": 115
     }
 }

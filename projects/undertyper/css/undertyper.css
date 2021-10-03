@@ -1,0 +1,26 @@
+/* File: undertyper.css */
+/* Author: AyeTSG */
+/* Project: UnderTyper */
+/* Purpose: Provide proper layout for the undertale typer */
+
+/* Set the background of the page to black */
+body {
+    background-color: black;
+}
+
+/* General characters */
+.character {
+    position: relative;
+}
+
+/* Sans characters */
+.character.speaker_sans {
+    image-rendering: crisp-edges;
+    width: 32px;
+    padding: 2px;
+}
+
+/* Sans character: lowercase y */
+.character.speaker_sans.character_y {
+    top: 15px;
+}
