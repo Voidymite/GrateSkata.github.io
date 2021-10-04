@@ -17,41 +17,11 @@ body {
 .character.speaker_sans {
     image-rendering: crisp-edges;
     width: 32px;
+    height: 32px;
     padding: 2px;
 }
 
-/* Sans character: asterisk */
-.character.speaker_sans.character_asterisk {
-    bottom: 26px;
-}
-
-/* Sans character: dash */
-.character.speaker_sans.character_dash {
-    bottom: 15px;
-}
-
-/* Sans character: double quote */
-.character.speaker_sans.character_double_quote {
-    bottom: 26px;
-}
-
-/* Sans character: lowercase g */
-.character.speaker_sans.character_g {
-    height: 36px;
-}
-
-/* Sans character: lowercase i */
+/* Sans lowercase i */
 .character.speaker_sans.character_i {
-    width: 9px;
-}
-
-/* Sans character: lowercase y */
-.character.speaker_sans.character_y {
-    top: 15px;
-}
-
-/* Sans character: period */
-.character.speaker_sans.character_period {
-    width: 8px;
-    height: 8px;
+    width: 10px;
 }
