@@ -17,6 +17,7 @@ var speaker_configs = {
         "speak_sounds": [
             "audio/sounds/speak/sans/snd_txtsans.wav",
         ],
-        "time_type": 115
+        "time_type": 115,
+        "valid_characters": " .?@%_$&#/{}+~)[](=*-<>;'^|,!:`'0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
     }
 }

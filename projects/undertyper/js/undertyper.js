@@ -108,8 +108,6 @@ function filterCharacter(in_character) {
     switch (in_character) {
         case " ":
             return "space";
-        case ".":
-            return "dot";
         case "?":
             return "question_mark";
         case "@":
@@ -132,6 +130,48 @@ function filterCharacter(in_character) {
             return "open_curly_bracket";
         case "}":
             return "closed_curly_bracket";
+        case "+":
+            return "plus";
+        case "~":
+            return "tilde";
+        case ")":
+            return "closed_round_bracket";
+        case "[":
+            return "open_square_bracket";
+        case "]":
+            return "closed_square_bracket";
+        case "(":
+            return "open_round_bracket";
+        case "=":
+            return "equals";
+        case "*":
+            return "asterisk";
+        case "-":
+            return "dash";
+        case "<":
+            return "open_arrow";
+        case ">":
+            return "closed_arrow";
+        case ";":
+            return "semicolon";
+        case "\"":
+            return "double_quote";
+        case "^":
+            return "up_arrow";
+        case "|":
+            return "line";
+        case ",":
+            return "comma";
+        case "!":
+            return "exclamation_point";
+        case ".":
+            return "period";
+        case ":":
+            return "colon";
+        case "`":
+            return "fancy_single_quote";
+        case "'":
+            return "single_quote";
         default:
             return in_character
     }
