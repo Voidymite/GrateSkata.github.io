@@ -13,15 +13,18 @@ body {
     position: relative;
 }
 
+/* Message border */
+#onscreen_message_text {
+    display: inline-block;
+    border-style: solid;
+    border-color: white;
+    padding: 64px;
+}
+
 /* Sans characters */
 .character.speaker_sans {
     image-rendering: crisp-edges;
     width: 32px;
     height: 32px;
     padding: 2px;
-}
-
-/* Sans lowercase i */
-.character.speaker_sans.character_i {
-    width: 10px;
 }

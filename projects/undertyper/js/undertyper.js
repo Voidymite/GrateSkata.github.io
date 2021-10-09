@@ -272,7 +272,7 @@ async function testSpeaker(in_speaker) {
     await ms_sleep(5000);
 
     // Symbol testing
-    await typePhrase(" .?@%_$&#/{}+~)[](=*-<>;'^|,!:`'0", in_speaker);
+    await typePhrase(" .?@%_$&#/{}+~)[](=*-<>;'^|,!:`'", in_speaker);
 }
 
 /*
