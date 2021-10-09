@@ -3,6 +3,8 @@
 /* Project: UnderTyper */
 /* Purpose: Provide proper layout for the undertale typer */
 
+/* TODO!!!!! Fix case insensitivty, case sensitivity is absolutely needed here. */
+
 /* Set the background of the page to black */
 body {
     background-color: black;
@@ -27,4 +29,14 @@ body {
     width: 32px;
     height: 32px;
     padding: 2px;
+}
+
+/* Sans character - e */
+.character.speaker_sans.character_e {
+    width: 27px;
+}
+
+/* Sans character - i */
+.character.speaker_sans.character_i {
+    width: 9px;
 }
