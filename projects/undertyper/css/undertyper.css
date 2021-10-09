@@ -31,12 +31,17 @@ body {
     padding: 2px;
 }
 
-/* Sans character - e */
-.character.speaker_sans.character_e {
+/* Sans character - lowercase e */
+.character.speaker_sans.character_lowercase_e {
     width: 27px;
 }
 
-/* Sans character - i */
-.character.speaker_sans.character_i {
+/* Sans character - lowercase i */
+.character.speaker_sans.character_lowercase_i {
     width: 9px;
+}
+
+/* Sans character - symbol underscore */
+.character.speaker_sans.character_underscore {
+    height: 4px;
 }
