@@ -248,6 +248,34 @@ function playSpeakSound(in_speaker) {
 }
 
 /*
+Purpose: Tests a speaker's full character set
+Arguments:
+    in_speaker: Speaker to use
+*/
+async function testSpeaker(in_speaker) {
+    // Capital testing
+    await typePhrase("THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG", in_speaker);
+
+    // Wait 5 seconds
+    await ms_sleep(5000);
+
+    // Lowercase testing
+    await typePhrase("the quick brown fox jumped over the lazy dog", in_speaker);
+
+    // Wait 5 seconds
+    await ms_sleep(5000);
+
+    // Number testing
+    await typePhrase("0123456789", in_speaker);
+
+    // Wait 5 seconds
+    await ms_sleep(5000);
+
+    // Symbol testing
+    await typePhrase(" .?@%_$&#/{}+~)[](=*-<>;'^|,!:`'0", in_speaker);
+}
+
+/*
 Purpose: Clears the current message on the screen
 */
 function clearOnscreenMessage() {
