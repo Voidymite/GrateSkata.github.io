@@ -103,6 +103,8 @@ async function precacheSpeaker(in_speaker) {
 Purpose: Filters a character
 Arguments:
     in_character: Character to be filtered
+Notes:
+    10/9/21: We're now using this to differentiate between upper and lowercase characters... thanks css.
 */
 function filterCharacter(in_character) {
     switch (in_character) {
@@ -172,6 +174,110 @@ function filterCharacter(in_character) {
             return "fancy_single_quote";
         case "'":
             return "single_quote";
+        case "A":
+            return "capital_A";
+        case "a":
+            return "lowercase_a";
+        case "B":
+            return "capital_B";
+        case "b":
+            return "lowercase_b";
+        case "C":
+            return "capital_C";
+        case "c":
+            return "lowercase_c";
+        case "D":
+            return "capital_D";
+        case "d":
+            return "lowercase_d";
+        case "E":
+            return "capital_E";
+        case "e":
+            return "lowercase_e";
+        case "F":
+            return "capital_F";
+        case "f":
+            return "lowercase_f";
+        case "G":
+            return "capital_G";
+        case "g":
+            return "lowercase_g";
+        case "H":
+            return "capital_H";
+        case "h":
+            return "lowercase_h";
+        case "I":
+            return "capital_I";
+        case "i":
+            return "lowercase_i";
+        case "J":
+            return "capital_J";
+        case "j":
+            return "lowercase_j";
+        case "K":
+            return "capital_K";
+        case "k":
+            return "lowercase_k";
+        case "L":
+            return "capital_L";
+        case "l":
+            return "lowercase_l";
+        case "M":
+            return "capital_M";
+        case "m":
+            return "lowercase_m";
+        case "N":
+            return "capital_N";
+        case "n":
+            return "lowercase_n";
+        case "O":
+            return "capital_O";
+        case "o":
+            return "lowercase_o";
+        case "P":
+            return "capital_P";
+        case "p":
+            return "lowercase_p";
+        case "Q":
+            return "capital_Q";
+        case "q":
+            return "lowercase_q";
+        case "R":
+            return "capital_R";
+        case "r":
+            return "lowercase_r";
+        case "S":
+            return "capital_S";
+        case "s":
+            return "lowercase_s";
+        case "T":
+            return "capital_T";
+        case "t":
+            return "lowercase_t";
+        case "U":
+            return "capital_U";
+        case "u":
+            return "lowercase_u";
+        case "V":
+            return "capital_V";
+        case "v":
+            return "lowercase_v";
+        case "W":
+            return "capital_W";
+        case "w":
+            return "lowercase_w";
+        case "X":
+            return "capital_X";
+        case "x":
+            return "lowercase_x";
+        case "Y":
+            return "capital_Y";
+        case "y":
+            return "lowercase_y";
+        case "Z":
+            return "capital_Z";
+        case "z":
+            return "lowercase_z";
         default:
             return in_character
     }
@@ -194,7 +300,7 @@ function typeCharacter(in_character, in_speaker) {
     // Add appropriate classes
     img.classList.add("character");
     img.classList.add("speaker_" + in_speaker);
-    img.classList.add("character_" + in_character);
+    img.classList.add("character_" + filterCharacter(in_character));
 
     // Add the image to the document
     document.getElementById("onscreen_message_text").appendChild(img);
